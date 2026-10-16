@@ -600,3 +600,93 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+
+/* ==========================================================================
+   8. FAQ ACCORDION
+   ========================================================================== */
+function initFaqAccordion() {
+  const items = document.querySelectorAll('.faq-item');
+  items.forEach(item => {
+    const q = item.querySelector('.faq-question');
+    if (!q) return;
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
+      if (!isOpen) {
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   9. INTERACTIVE CHECKOUT & LICENSE KEY MODAL
+   ========================================================================== */
+function initCheckoutModal() {
+  const modal = document.getElementById('checkoutModal');
+  const closeBtn = document.getElementById('checkoutClose');
+  const form = document.getElementById('checkoutForm');
+  const formView = document.getElementById('checkoutFormView');
+  const successView = document.getElementById('checkoutSuccessView');
+  const planNameEl = document.getElementById('checkoutPlanName');
+  const planPriceEl = document.getElementById('checkoutPlanPrice');
+  const genLicenseKeyEl = document.getElementById('genLicenseKey');
+  const payMethods = document.querySelectorAll('.pay-method-btn');
+
+  if (!modal) return;
+
+  // Open on any CTA with class .open-checkout
+  document.querySelectorAll('.open-checkout').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const plan = btn.getAttribute('data-plan') || 'NEXUS Pro';
+      const price = btn.getAttribute('data-price') || '$29 / Ay';
+
+      if (planNameEl) planNameEl.textContent = plan;
+      if (planPriceEl) planPriceEl.textContent = price;
+
+      if (formView) formView.style.display = 'block';
+      if (successView) successView.style.display = 'none';
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  payMethods.forEach(pm => {
+    pm.addEventListener('click', () => {
+      payMethods.forEach(p => p.classList.remove('active'));
+      pm.classList.add('active');
+    });
+  });
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('checkoutEmail')?.value || 'user@example.com';
+      const randomKey = 'NX2-' + Math.random().toString(36).substring(2, 6).toUpperCase() + '-' + Math.random().toString(36).substring(2, 6).toUpperCase() + '-VERIFIED';
+
+      if (genLicenseKeyEl) genLicenseKeyEl.textContent = randomKey;
+
+      if (formView) formView.style.display = 'none';
+      if (successView) successView.style.display = 'block';
+    });
+  }
+}
+
+// Ensure new functions run on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+  initFaqAccordion();
+  initCheckoutModal();
+});
