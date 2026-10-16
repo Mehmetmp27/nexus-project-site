@@ -1407,3 +1407,448 @@ img {
     text-align: center;
   }
 }
+
+
+/* ==========================================================================
+   NEURAL CANVAS BACKGROUND
+   ========================================================================== */
+#neuralCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+/* ==========================================================================
+   INTERACTIVE VOICE PLAYER (HERO HUD)
+   ========================================================================== */
+.voice-ctrl-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(13, 22, 48, 0.9);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  margin-top: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.voice-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+  color: #fff;
+  border: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.35);
+}
+
+.voice-play-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 24px rgba(0, 242, 254, 0.6);
+}
+
+.voice-play-btn.speaking {
+  background: linear-gradient(135deg, var(--accent-rose), var(--accent-amber));
+  animation: pulse-dot 1.5s infinite;
+}
+
+.voice-subtitle-text {
+  font-size: 0.78rem;
+  color: #c9d8f5;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+/* ==========================================================================
+   COMPARISON SECTION: LEGACY CHATBOT VS NEXUS-V2
+   ========================================================================== */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.compare-card {
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.compare-card-legacy {
+  background: rgba(18, 20, 28, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compare-card-nexus {
+  background: linear-gradient(180deg, rgba(16, 26, 56, 0.85), rgba(7, 11, 24, 0.95));
+  border: 1px solid var(--border-glow);
+  box-shadow: var(--glow-cyan), var(--glow-subtle);
+}
+
+.compare-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compare-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.compare-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.compare-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.compare-icon-bad {
+  color: var(--accent-rose);
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.compare-icon-good {
+  color: var(--accent-cyan);
+  font-size: 1.1rem;
+  margin-top: 3px;
+  text-shadow: 0 0 10px var(--accent-cyan);
+}
+
+.compare-feature-text strong {
+  display: block;
+  font-size: 0.96rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.compare-feature-text p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   INTERACTIVE FINANCE / BIST ANALYZER SECTION
+   ========================================================================== */
+.finance-showcase-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 34px;
+  backdrop-filter: blur(16px);
+  margin-top: 36px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.finance-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.finance-stock-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stock-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #10b981, #0284c7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.stock-info h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stock-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.finance-scenario-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fin-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.fin-btn:hover, .fin-btn.active {
+  background: rgba(0, 242, 254, 0.15);
+  border-color: var(--accent-cyan);
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0, 242, 254, 0.25);
+}
+
+.finance-content-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+}
+
+.fin-report-card {
+  background: rgba(5, 8, 20, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.fin-report-title {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fin-report-body {
+  font-size: 0.92rem;
+  color: #d1dcfa;
+  line-height: 1.7;
+}
+
+.fin-metrics-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fin-metric-tile {
+  background: rgba(14, 22, 48, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fin-metric-tile .label {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.fin-metric-tile .val {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   COMMAND PALETTE MODAL (CTRL + K)
+   ========================================================================== */
+.cmd-palette-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 4, 10, 0.85);
+  backdrop-filter: blur(20px);
+  z-index: 10000;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 14vh;
+}
+
+.cmd-palette-backdrop.active {
+  display: flex;
+}
+
+.cmd-palette-box {
+  width: 100%;
+  max-width: 620px;
+  background: #080d22;
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), var(--glow-cyan);
+  overflow: hidden;
+}
+
+.cmd-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cmd-input-bar i {
+  color: var(--accent-cyan);
+  font-size: 1.15rem;
+}
+
+.cmd-input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: #fff;
+}
+
+.cmd-kbd-badge {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+.cmd-list-items {
+  list-style: none;
+  padding: 12px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.cmd-item {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: var(--transition);
+  color: #c5d3f2;
+}
+
+.cmd-item:hover, .cmd-item.selected {
+  background: rgba(0, 242, 254, 0.12);
+  color: #fff;
+}
+
+.cmd-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+}
+
+.cmd-item-left i {
+  color: var(--accent-cyan);
+  width: 18px;
+}
+
+.cmd-item-shortcut {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   DOWNLOAD & HARDWARE REQUIREMENTS SECTION
+   ========================================================================== */
+.download-card-hero {
+  background: linear-gradient(135deg, rgba(16, 26, 56, 0.8), rgba(7, 10, 22, 0.95));
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius-xl);
+  padding: 48px;
+  box-shadow: var(--glow-cyan);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.req-grid-specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.req-box {
+  background: rgba(4, 7, 16, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.req-box-label {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.req-box-val {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .comparison-grid, .download-card-hero, .finance-content-grid {
+    grid-template-columns: 1fr;
+  }
+}

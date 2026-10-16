@@ -28,6 +28,9 @@
 </head>
 <body>
 
+  <!-- Neural Particle Live Canvas Background -->
+  <canvas id="neuralCanvas"></canvas>
+
   <!-- Cyber Grid Subtle Background Effect -->
   <div class="cyber-grid-overlay"></div>
 
@@ -46,18 +49,23 @@
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">Hakkında</a></li>
           <li><a href="#nexus01" class="nav-link">NEXUS-01 Varlık</a></li>
-          <li><a href="#architecture" class="nav-link">Bilişsel Mimari</a></li>
+          <li><a href="#comparison" class="nav-link">Farkımız</a></li>
+          <li><a href="#architecture" class="nav-link">Mimari</a></li>
           <li><a href="#cockpit" class="nav-link">Canlı Kokpit</a></li>
-          <li><a href="#agents" class="nav-link">Uzman Ajanlar</a></li>
+          <li><a href="#finance" class="nav-link">Finans / BIST</a></li>
+          <li><a href="#agents" class="nav-link">Ajanlar</a></li>
           <li><a href="#security" class="nav-link">M3 Güvenlik</a></li>
-          <li><a href="#status" class="nav-link">Mühendislik Durumu</a></li>
+          <li><a href="#download" class="nav-link">İndir</a></li>
         </ul>
 
         <div class="nav-cta">
-          <div class="badge badge-emerald">
-            <span class="badge-dot"></span>
-            M3 AUDIT: ONLINE
-          </div>
+          <!-- Command Palette Trigger -->
+          <button class="btn btn-secondary" id="cmdSearchTrigger" style="padding: 6px 14px; font-size: 0.78rem;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Ara</span>
+            <kbd class="cmd-kbd-badge" style="margin-left: 4px;">Ctrl K</kbd>
+          </button>
+
           <a href="https://github.com/mehmetmp27/nexus-project-site" target="_blank" rel="noopener" class="btn btn-secondary">
             <i class="fa-brands fa-github"></i>
             <span>GitHub</span>
@@ -142,7 +150,8 @@
                 <div style="font-size: 0.78rem; color: #a4b3d6; margin-top: 4px;">
                   Fotogerçekçi Dijital İnsan · Türkçe Sesli Arayüz & Mimik Senkronu
                 </div>
-                <!-- Audio Frequency Waveform Simulation -->
+
+                <!-- Audio Waveform Visualization -->
                 <div class="audio-spectrum-vis">
                   <div class="audio-bar"></div>
                   <div class="audio-bar"></div>
@@ -152,6 +161,15 @@
                   <div class="audio-bar"></div>
                   <div class="audio-bar"></div>
                   <div class="audio-bar"></div>
+                </div>
+
+                <!-- Live Voice Control Player -->
+                <div class="voice-ctrl-box">
+                  <button class="voice-play-btn" id="voicePlayBtn">
+                    <i class="fa-solid fa-play"></i>
+                    <span>NEXUS-01 Sesini Dinle</span>
+                  </button>
+                  <div class="voice-subtitle-text" id="voiceSubtitle">Tıkla ve dinle...</div>
                 </div>
               </div>
             </div>
@@ -163,59 +181,109 @@
   </section>
 
   <!-- ========================================================================
-       ABOUT SECTION
+       COMPARISON SECTION: LEGACY CHATBOT VS NEXUS-V2
        ======================================================================== -->
-  <section class="section section-alt" id="about">
+  <section class="section section-alt" id="comparison">
     <div class="container">
       <div class="section-head">
-        <div class="badge">PROJE VİZYONU & FELSEFESİ</div>
-        <h2 class="section-title">NEXUS Nedir ve Neden Farklıdır?</h2>
+        <div class="badge badge-cyan">MİMARİ KIYASLAMA</div>
+        <h2 class="section-title">Sıradan Bir Chatbot mu, Yoksa NEXUS mu?</h2>
         <p class="section-desc">
-          Tek bir sağlayıcının API'sine bağımlı basit bir sohbet penceresi değildir. 
-          Kullanıcı haklarını, veri gizliliğini ve işlem kanıtlarını merkeze alan gerçek bir işletim katmanıdır.
+          Neden basit bir API arayüzünün ötesine geçtik? Kişisel bilişsel işletim sistemi ile sıradan yapay zekâ pencereleri arasındaki fark:
         </p>
       </div>
 
-      <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3 class="pillar-title">Sağlayıcı Bağımsızlığı</h3>
-          <p class="pillar-text">
-            Harici yapay zekâ sağlayıcıları (OpenAI, Gemini, Anthropic, DeepSeek, xAI) ve yerel modeller (Ollama) değiştirilebilir hesaplama kaynaklarıdır.
-            NEXUS'un hafızası, kimliği ve kuralları sağlayıcı değişse bile yok olmaz.
-          </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Model Mesh & Akıllı Yönlendirici</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Kota & Maliyet Takip Kalkanı</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Yerel / Bulut Hibrit Yürütme</li>
+      <div class="comparison-grid">
+        
+        <!-- Legacy Chatbot Card -->
+        <div class="compare-card compare-card-legacy">
+          <div class="compare-header">
+            <h3 class="compare-title" style="color: #94a3b8;">
+              <i class="fa-regular fa-comments"></i>
+              Geleneksel Chatbot
+            </h3>
+            <span class="badge" style="background: rgba(244, 63, 94, 0.1); color: var(--accent-rose); border-color: rgba(244, 63, 94, 0.3);">
+              Kısıtlı & Geçici
+            </span>
+          </div>
+
+          <ul class="compare-feature-list">
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-xmark compare-icon-bad"></i>
+              <div class="compare-feature-text">
+                <strong>Sıfır Kalıcı Hafıza</strong>
+                <p>Yeni sekme açıldığında önceki oturum, kararlar, tercihler ve çalışma bağlamı tamamen buharlaşır.</p>
+              </div>
+            </li>
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-xmark compare-icon-bad"></i>
+              <div class="compare-feature-text">
+                <strong>Tek Sağlayıcı Tekeli</strong>
+                <p>Yalnızca tek bir şirketin modeline bağımlıdır. Kota dolduğunda veya sistem çöktüğünde çalışma durur.</p>
+              </div>
+            </li>
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-xmark compare-icon-bad"></i>
+              <div class="compare-feature-text">
+                <strong>Sınırlandırılmamış Kör İzinler</strong>
+                <p>LLM çıktısı doğrudan otorite kabul edilir; yetki kapsamı ve güvenlik denetim kaydı bulunmaz.</p>
+              </div>
+            </li>
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-xmark compare-icon-bad"></i>
+              <div class="compare-feature-text">
+                <strong>Ruhsuz Metin Kutusu</strong>
+                <p>Yalnızca metin akıtan soğuk bir arayüz; görsel varlık, kimlik devamlılığı veya sesli senkron yoktur.</p>
+              </div>
+            </li>
           </ul>
         </div>
 
-        <div class="pillar-card">
-          <div class="pillar-icon-box"><i class="fa-solid fa-memory"></i></div>
-          <h3 class="pillar-title">Gerçek Kalıcı Hafıza (Fabric)</h3>
-          <p class="pillar-text">
-            Geçici sohbet pencerelerinde kaybolan bağlamlar yerine; tarihli, kaynak kökenli (provenance), önem puanlı ve kullanıcı tarafından düzenlenebilir/silinebilir SQLite bellek altyapısı.
-          </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> M3 Seviyesinde Kanıtlı Persistence</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Kullanıcı Yetkili Silme & Düzeltme</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Episodik & Proje Kapsamlı Bellek</li>
+        <!-- NEXUS-v2 Card -->
+        <div class="compare-card compare-card-nexus">
+          <div class="compare-header">
+            <h3 class="compare-title" style="color: #fff;">
+              <i class="fa-solid fa-microchip" style="color: var(--accent-cyan);"></i>
+              NEXUS-v2 Cognitive Layer
+            </h3>
+            <span class="badge badge-emerald">
+              <span class="badge-dot"></span>
+              Tam Bağımsız Çekirdek
+            </span>
+          </div>
+
+          <ul class="compare-feature-list">
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-check compare-icon-good"></i>
+              <div class="compare-feature-text">
+                <strong>SQLite M3 Kalıcı Provenance Hafızası</strong>
+                <p>Tarihli, kaynaklı ve güven skorlu bellek; kullanıcı dilediği an geçmiş kayıtları denetleyebilir ve silebilir.</p>
+              </div>
+            </li>
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-check compare-icon-good"></i>
+              <div class="compare-feature-text">
+                <strong>Model Mesh & Hibrit Yönlendirme</strong>
+                <p>Gemini, GPT, Claude, DeepSeek veya yerel Ollama modelleri arasında göreve ve maliyete göre anlık geçiş.</p>
+              </div>
+            </li>
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-check compare-icon-good"></i>
+              <div class="compare-feature-text">
+                <strong>L0-L4 İzin Kalkanı & Fail-Closed Güvenlik</strong>
+                <p>"LLM otorite değildir." Her araç eylemi özne kapsamına bağlanır; yetki iptal edildiğinde işlem anında engellenir.</p>
+              </div>
+            </li>
+            <li class="compare-feature-item">
+              <i class="fa-solid fa-check compare-icon-good"></i>
+              <div class="compare-feature-text">
+                <strong>Fotogerçekçi NEXUS-01 Dijital İnsan</strong>
+                <p>Tutarlı yüz kimliği (`1000321941.png`), Türkçe ses sentezi ve barge-in ile kesilebilir akıcı konuşma deneyimi.</p>
+              </div>
+            </li>
           </ul>
         </div>
 
-        <div class="pillar-card">
-          <div class="pillar-icon-box"><i class="fa-solid fa-lock"></i></div>
-          <h3 class="pillar-title">LLM Otorite Değildir</h3>
-          <p class="pillar-text">
-            Bir modelin bir aracı çağırması, o eylemi meşru veya güvenli kılmaz. Bütün araçlar; capability kapsamı, L0-L4 risk sınıflandırması ve kalıcı denetim (audit) kurallarıyla fail-closed çalışır.
-          </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> L0 - L4 Risk Kademesi</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Anlık Grant / Revoke Mimarisi</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Acil Durdurma (Emergency Stop)</li>
-          </ul>
-        </div>
       </div>
     </div>
   </section>
@@ -642,9 +710,86 @@
   </section>
 
   <!-- ========================================================================
+       INTERACTIVE FINANCE / BIST ANALYZER SECTION
+       ======================================================================== -->
+  <section class="section section-alt" id="finance">
+    <div class="container">
+      <div class="section-head">
+        <div class="badge badge-emerald">ÖZEL ANALİZ MODÜLÜ</div>
+        <h2 class="section-title">İnteraktif BIST & Şirket Analiz Motoru</h2>
+        <p class="section-desc">
+          Finansal analiz yalnızca mum grafiği değildir. Şirketin bilanço nakit akışı, KAP duyuruları, fiyat/hacim yapısı ve üç farklı senaryoya dayalı bağımsız değerlendirme:
+        </p>
+      </div>
+
+      <div class="finance-showcase-box">
+        
+        <!-- Header row -->
+        <div class="finance-nav-row">
+          <div class="finance-stock-badge">
+            <div class="stock-avatar">GK</div>
+            <div class="stock-info">
+              <h4>GENKM · Gentaş Kimya San. A.Ş.</h4>
+              <span>BIST Kimya & İleri Malzemeler · Zaman Damgası: 2026-10-15</span>
+            </div>
+          </div>
+
+          <!-- Scenario Buttons -->
+          <div class="finance-scenario-btns">
+            <button class="fin-btn active" data-fin="bull"><i class="fa-solid fa-arrow-trend-up"></i> Boğa Kırılımı</button>
+            <button class="fin-btn" data-fin="base"><i class="fa-solid fa-scale-balanced"></i> Baz Senaryo</button>
+            <button class="fin-btn" data-fin="bear"><i class="fa-solid fa-shield-halved"></i> Ayı Savunması</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Content Grid -->
+        <div class="finance-content-grid">
+          
+          <div class="fin-report-card">
+            <div class="fin-report-title" id="finReportTitle">
+              <i class="fa-solid fa-chart-line"></i> BOĞA SENARYOSU — Hacimli Direnç Kırılımı
+            </div>
+            <p class="fin-report-body" id="finReportBody">
+              Bilanço nakit pozisyonundaki artış ve KAP üzerinde açıklanan yeni ihracat siparişi hisse üzerinde pozitif katalizör oluşturuyor. 120 günlük hareketli ortalamanın üzerine hacimli geçiş durumunda momentum artışı öngörülmektedir.
+            </p>
+            <div style="margin-top: 20px; font-size: 0.76rem; font-family: var(--font-mono); color: var(--text-dim);">
+              <i class="fa-solid fa-circle-info"></i> Yatırım tavsiyesi değildir. Kanıta dayalı olasılık ve risk analizidir.
+            </div>
+          </div>
+
+          <div class="fin-metrics-col">
+            <div class="fin-metric-tile">
+              <span class="label">Fiyat / Kazanç (F/K)</span>
+              <span class="val" id="metricFk">9.4</span>
+            </div>
+            <div class="fin-metric-tile">
+              <span class="label">Piyasa Değeri / Defter (PD/DD)</span>
+              <span class="val" id="metricPddd">1.85</span>
+            </div>
+            <div class="fin-metric-tile">
+              <span class="label">Net Nakit Pozisyonu</span>
+              <span class="val" style="color: var(--accent-emerald);" id="metricNakit">+142M ₺</span>
+            </div>
+            <div class="fin-metric-tile">
+              <span class="label">Takip Seviyesi (Direnç)</span>
+              <span class="val" style="color: var(--accent-cyan);" id="metricDirenc">48.50 ₺</span>
+            </div>
+            <div class="fin-metric-tile">
+              <span class="label">Kritik Eşik (Destek)</span>
+              <span class="val" style="color: var(--accent-rose);" id="metricDestek">42.10 ₺</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
        AGENT ROSTER SECTION
        ======================================================================== -->
-  <section class="section section-alt" id="agents">
+  <section class="section" id="agents">
     <div class="container">
       <div class="section-head">
         <div class="badge badge-violet">UZMANLIK KATMANI</div>
@@ -759,7 +904,7 @@
   <!-- ========================================================================
        SECURITY CONTRACT & PHILOSOPHY
        ======================================================================== -->
-  <section class="section" id="security">
+  <section class="section section-alt" id="security">
     <div class="container">
       <div class="section-head">
         <div class="badge badge-emerald">SAVUNMA MİMARİSİ</div>
@@ -798,7 +943,7 @@
   <!-- ========================================================================
        STATUS & GAP MATRIX TABLE
        ======================================================================== -->
-  <section class="section section-alt" id="status">
+  <section class="section" id="status">
     <div class="container">
       <div class="section-head">
         <div class="badge badge-cyan">MÜHENDİSLİK ŞEFFAFLIĞI</div>
@@ -869,6 +1014,59 @@
   </section>
 
   <!-- ========================================================================
+       DOWNLOAD & HARDWARE REQUIREMENTS SECTION
+       ======================================================================== -->
+  <section class="section section-alt" id="download">
+    <div class="container">
+      <div class="download-card-hero">
+        
+        <div>
+          <div class="badge badge-emerald" style="margin-bottom: 16px;">
+            <span class="badge-dot"></span> WINDOWS 11 NATIVE CORE
+          </div>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 14px;">
+            NEXUS Masaüstü Sürümünü İnceleyin
+          </h2>
+          <p style="color: #b5c4e8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 26px;">
+            NEXUS-v2 masaüstü uygulaması Tauri v2 ve Rust ile derlenir; minimum RAM ve CPU ayak iziyle yerel Windows ortamında çalışır.
+          </p>
+
+          <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+            <a href="https://github.com/mehmetmp27/nexus-project-site" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fa-brands fa-windows"></i>
+              <span>GitHub'da Kaynak Kodu İncele</span>
+            </a>
+            <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-dim);">
+              SHA-256 Doğrulamalı Güvenlik İmzası
+            </span>
+          </div>
+        </div>
+
+        <!-- Hardware Specs -->
+        <div class="req-grid-specs">
+          <div class="req-box">
+            <div class="req-box-label">İşletim Sistemi</div>
+            <div class="req-box-val">Windows 11 (x64)</div>
+          </div>
+          <div class="req-box">
+            <div class="req-box-label">İşlemci (CPU)</div>
+            <div class="req-box-val">Intel i5-12500H / Denk</div>
+          </div>
+          <div class="req-box">
+            <div class="req-box-label">Sistem Belleği (RAM)</div>
+            <div class="req-box-val">16 GB Önerilen</div>
+          </div>
+          <div class="req-box">
+            <div class="req-box-label">Grafik (GPU)</div>
+            <div class="req-box-val">RTX 3060 (6GB VRAM)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
        FOOTER
        ======================================================================== -->
   <footer class="site-footer">
@@ -889,6 +1087,7 @@
           <h4 class="footer-col-title">Proje & Mimari</h4>
           <ul class="footer-links">
             <li><a href="#about" class="footer-link">Proje Vizyonu</a></li>
+            <li><a href="#comparison" class="footer-link">Chatbot Kıyaslaması</a></li>
             <li><a href="#architecture" class="footer-link">6 Temel Katman</a></li>
             <li><a href="#nexus01" class="footer-link">NEXUS-01 Varlık</a></li>
             <li><a href="#security" class="footer-link">M3 Güvenlik Sözleşmesi</a></li>
@@ -899,6 +1098,7 @@
           <h4 class="footer-col-title">Masaüstü & Teknoloji</h4>
           <ul class="footer-links">
             <li><a href="#cockpit" class="footer-link">Canlı Kokpit Simülatörü</a></li>
+            <li><a href="#finance" class="footer-link">BIST Finans Analizi</a></li>
             <li><a href="#agents" class="footer-link">Uzman Ajan Kataloğu</a></li>
             <li><a href="#status" class="footer-link">Mühendislik Gap Matrisi</a></li>
             <li><a href="https://github.com/mehmetmp27/nexus-project-site" class="footer-link" target="_blank" rel="noopener">GitHub Kaynak Kodu</a></li>
@@ -940,6 +1140,53 @@
         </div>
         <span class="badge badge-cyan">NEXUS-01 ASSET</span>
       </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       COMMAND PALETTE MODAL (CTRL + K)
+       ======================================================================== -->
+  <div class="cmd-palette-backdrop" id="cmdPalette">
+    <div class="cmd-palette-box">
+      <div class="cmd-input-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="cmd-input-field" id="cmdInput" placeholder="Nereye gitmek istiyorsunuz? (Örn: avatar, finans, güvenlik)...">
+        <kbd class="cmd-kbd-badge">ESC</kbd>
+      </div>
+      <ul class="cmd-list-items">
+        <li class="cmd-item" data-target="#nexus01">
+          <div class="cmd-item-left"><i class="fa-solid fa-user-astronaut"></i><span>NEXUS-01 Varlık ve Biyometri Galerisi</span></div>
+          <span class="cmd-item-shortcut">#nexus01</span>
+        </li>
+        <li class="cmd-item" data-target="#cockpit">
+          <div class="cmd-item-left"><i class="fa-solid fa-terminal"></i><span>Canlı Masaüstü Kokpiti (Simülatör)</span></div>
+          <span class="cmd-item-shortcut">#cockpit</span>
+        </li>
+        <li class="cmd-item" data-target="#finance">
+          <div class="cmd-item-left"><i class="fa-solid fa-chart-line"></i><span>İnteraktif BIST & Finans Analiz Motoru</span></div>
+          <span class="cmd-item-shortcut">#finance</span>
+        </li>
+        <li class="cmd-item" data-target="#comparison">
+          <div class="cmd-item-left"><i class="fa-solid fa-scale-balanced"></i><span>Chatbot vs. NEXUS Mimari Kıyaslaması</span></div>
+          <span class="cmd-item-shortcut">#comparison</span>
+        </li>
+        <li class="cmd-item" data-target="#architecture">
+          <div class="cmd-item-left"><i class="fa-solid fa-cubes"></i><span>6 Temel Bilişsel Katman</span></div>
+          <span class="cmd-item-shortcut">#architecture</span>
+        </li>
+        <li class="cmd-item" data-target="#security">
+          <div class="cmd-item-left"><i class="fa-solid fa-shield-halved"></i><span>M3 Güvenlik ve İzin Sözleşmesi</span></div>
+          <span class="cmd-item-shortcut">#security</span>
+        </li>
+        <li class="cmd-item" data-target="voice">
+          <div class="cmd-item-left"><i class="fa-solid fa-volume-high"></i><span>NEXUS-01 Türkçe Sesli Yanıtını Çal</span></div>
+          <span class="cmd-item-shortcut">Ses Çal</span>
+        </li>
+        <li class="cmd-item" data-target="#download">
+          <div class="cmd-item-left"><i class="fa-brands fa-windows"></i><span>Windows Donanım Gereksinimleri & Sürüm</span></div>
+          <span class="cmd-item-shortcut">#download</span>
+        </li>
+      </ul>
     </div>
   </div>
 
