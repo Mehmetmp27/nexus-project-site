@@ -621,72 +621,76 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   9. INTERACTIVE CHECKOUT & LICENSE KEY MODAL
+   9. WAITLIST FORM — AJAX submit with inline success message
    ========================================================================== */
-function initCheckoutModal() {
-  const modal = document.getElementById('checkoutModal');
-  const closeBtn = document.getElementById('checkoutClose');
-  const form = document.getElementById('checkoutForm');
-  const formView = document.getElementById('checkoutFormView');
-  const successView = document.getElementById('checkoutSuccessView');
-  const planNameEl = document.getElementById('checkoutPlanName');
-  const planPriceEl = document.getElementById('checkoutPlanPrice');
-  const genLicenseKeyEl = document.getElementById('genLicenseKey');
-  const payMethods = document.querySelectorAll('.pay-method-btn');
-
-  if (!modal) return;
-
-  // Open on any CTA with class .open-checkout
-  document.querySelectorAll('.open-checkout').forEach(btn => {
-    btn.addEventListener('click', (e) => {
+function initWaitlistForms() {
+  document.querySelectorAll('.waitlist-form').forEach(form => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const plan = btn.getAttribute('data-plan') || 'NEXUS Pro';
-      const price = btn.getAttribute('data-price') || '$29 / Ay';
+      const wrap = form.closest('.waitlist-form-wrap');
+      const successEl = wrap?.querySelector('.waitlist-success');
+      const submitBtn = form.querySelector('.waitlist-submit-btn');
 
-      if (planNameEl) planNameEl.textContent = plan;
-      if (planPriceEl) planPriceEl.textContent = price;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+      }
 
-      if (formView) formView.style.display = 'block';
-      if (successView) successView.style.display = 'none';
+      try {
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
 
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
+        if (response.ok) {
+          form.style.display = 'none';
+          if (successEl) successEl.style.display = 'flex';
+        } else {
+          form.style.display = 'none';
+          if (successEl) successEl.style.display = 'flex';
+        }
+      } catch (err) {
+        form.style.display = 'none';
+        if (successEl) successEl.style.display = 'flex';
+      }
     });
   });
+}
 
-  const closeModal = () => {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-  };
+/* ==========================================================================
+   10. DETAIL GALLERY FILTER (data-filter2 / data-cat2)
+   ========================================================================== */
+function initDetailGalleryFilter() {
+  const tabBtns = document.querySelectorAll('[data-filter2]');
+  const cards = document.querySelectorAll('[data-cat2]');
+  if (!tabBtns.length) return;
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  payMethods.forEach(pm => {
-    pm.addEventListener('click', () => {
-      payMethods.forEach(p => p.classList.remove('active'));
-      pm.classList.add('active');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.getAttribute('data-filter2');
+      cards.forEach(card => {
+        if (filter === 'all2' || card.getAttribute('data-cat2') === filter) {
+          card.style.display = '';
+          card.style.opacity = '0';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 0.35s ease';
+            card.style.opacity = '1';
+          });
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
-
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = document.getElementById('checkoutEmail')?.value || 'user@example.com';
-      const randomKey = 'NX2-' + Math.random().toString(36).substring(2, 6).toUpperCase() + '-' + Math.random().toString(36).substring(2, 6).toUpperCase() + '-VERIFIED';
-
-      if (genLicenseKeyEl) genLicenseKeyEl.textContent = randomKey;
-
-      if (formView) formView.style.display = 'none';
-      if (successView) successView.style.display = 'block';
-    });
-  }
 }
 
 // Ensure new functions run on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
-  initCheckoutModal();
+  initWaitlistForms();
+  initDetailGalleryFilter();
 });
