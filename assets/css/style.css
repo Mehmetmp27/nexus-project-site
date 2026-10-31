@@ -2545,3 +2545,48 @@ img {
   .waitlist-email-input { width: 100%; }
   .waitlist-submit-btn { width: 100%; }
 }
+
+
+/* ==========================================================================
+   ACTUAL DESKTOP RUNTIME SHOWCASE STYLES
+   ========================================================================== */
+.mode-media {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(0,0,0,0.4);
+  aspect-ratio: 16/10;
+}
+.mode-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.pillar-card:hover .mode-media img {
+  transform: scale(1.03);
+}
+.environment-hero-box {
+  margin-top: 3rem;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  position: relative;
+}
+.environment-hero-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.environment-caption {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10,12,24,0.85);
+  border-top: 1px solid var(--border-subtle);
+}
