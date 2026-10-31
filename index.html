@@ -1,37 +1,32 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXUS-v2 | Kişisel Bilişsel İşletim Sistemi & Dijital İnsan Varlığı</title>
-  <meta name="description" content="NEXUS-v2; harici yapay zekâ sağlayıcılarını, yerel modelleri, uzman ajanları ve masaüstü araçlarını birleştiren kişisel bilişsel işletim ekosistemi.">
-  <meta name="keywords" content="NEXUS, NEXUS-v2, Yapay Zeka, Digital Human, NEXUS-01, Cognitive Core, Tauri, Rust, AI Desktop, Multi-Agent">
+  <title>NEXUS-v2 | Kişisel Bilişsel İşletim Katmanı & NEXUS-01 Dijital İnsan</title>
+  <meta name="description" content="NEXUS-v2; Windows masaüstünde çalışan, konuşmayı anlayan, Türkçe yanıt veren, kalıcı hafızalı ve fotogerçekçi NEXUS-01 dijital insanına sahip kişisel AI işletim katmanıdır.">
+  <meta name="keywords" content="NEXUS, NEXUS-v2, NEXUS-01, Yapay Zeka, Dijital İnsan, Tauri, Rust, AI Operating Layer, Windows AI">
   <meta name="author" content="Mehmet / NEXUS-v2 Project Owner">
 
-  <!-- Open Graph / Meta -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mehmetmp27.github.io/nexus-project-site/">
-  <meta property="og:title" content="NEXUS-v2 | Personal Cognitive Operating Layer">
-  <meta property="og:description" content="Tek bir chatbot değil; bağımsız hafıza, model yönlendirici, uzman ajanlar ve fotogerçekçi NEXUS-01 varlığıyla donatılmış kişisel masaüstü sistemi.">
+  <meta property="og:title" content="NEXUS-v2 | Kişisel Bilişsel İşletim Katmanı">
+  <meta property="og:description" content="Basit bir chatbot değil; Windows masaüstünüzde yaşayan, izinli görevleri yürüten ve Türkçe konuşan fotogerçekçi dijital insan asistanınız.">
   <meta property="og:image" content="assets/images/nexus-01-canonical.png">
 
-  <!-- Google Fonts -->
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Core Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-  <!-- Neural Particle Live Canvas Background -->
+  <!-- Neural Particle Canvas -->
   <canvas id="neuralCanvas"></canvas>
-
-  <!-- Cyber Grid Subtle Background Effect -->
   <div class="cyber-grid-overlay"></div>
 
   <!-- ========================================================================
@@ -47,29 +42,24 @@
         </a>
 
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link">Hakkında</a></li>
+          <li><a href="#about" class="nav-link">NEXUS Nedir?</a></li>
           <li><a href="#nexus01" class="nav-link">NEXUS-01 Varlık</a></li>
           <li><a href="#comparison" class="nav-link">Farkımız</a></li>
-          <li><a href="#architecture" class="nav-link">Mimari</a></li>
-          <li><a href="#cockpit" class="nav-link">Canlı Kokpit</a></li>
-          <li><a href="#finance" class="nav-link">Finans / BIST</a></li>
-          <li><a href="#agents" class="nav-link">Ajanlar</a></li>
-          <li><a href="#pricing" class="nav-link">Fiyatlandırma</a></li>
+          <li><a href="#architecture" class="nav-link">Bilişsel Mimari</a></li>
+          <li><a href="#modes" class="nav-link">Çalışma Modları</a></li>
+          <li><a href="#security" class="nav-link">Güvenlik Anayasası</a></li>
+          <li><a href="#pricing" class="nav-link">Ön Sipariş</a></li>
           <li><a href="#faq" class="nav-link">SSS</a></li>
-          <li><a href="#download" class="nav-link">İndir</a></li>
         </ul>
 
         <div class="nav-cta">
-          <!-- Command Palette Trigger -->
           <button class="btn btn-secondary" id="cmdSearchTrigger" style="padding: 6px 14px; font-size: 0.78rem;">
             <i class="fa-solid fa-magnifying-glass"></i>
             <span>Ara</span>
             <kbd class="cmd-kbd-badge" style="margin-left: 4px;">Ctrl K</kbd>
           </button>
-
-          <a href="https://github.com/mehmetmp27/nexus-project-site" target="_blank" rel="noopener" class="btn btn-secondary">
-            <i class="fa-brands fa-github"></i>
-            <span>GitHub</span>
+          <a href="#pricing" class="btn btn-primary" style="padding: 7px 16px; font-size: 0.82rem;">
+            <span>Ön Siparişe Katıl</span>
           </a>
           <button class="mobile-menu-btn" aria-label="Menü"><i class="fa-solid fa-bars"></i></button>
         </div>
@@ -80,16 +70,16 @@
   <!-- ========================================================================
        HERO SECTION
        ======================================================================== -->
-  <section class="hero-section" id="hero">
+  <section class="hero-section" id="about">
     <div class="hero-glow-blob"></div>
     <div class="container">
       <div class="hero-grid">
         
-        <!-- Left Column: Copy & Actions -->
+        <!-- Left: Mission Statement -->
         <div class="hero-content">
           <div class="badge badge-violet">
             <span class="badge-dot"></span>
-            KİŞİSEL BİLİŞSEL İŞLETİM KATMANI · WINDOWS x64
+            KİŞİSEL BİLİŞSEL İŞLETİM KATMANI · WINDOWS 11
           </div>
 
           <h1 class="hero-title">
@@ -97,82 +87,83 @@
             <span class="hero-title-highlight">Yaşayan Bilişsel Ekosistem.</span>
           </h1>
 
-          <p class="hero-lead">
-            <strong>NEXUS-v2;</strong> harici yapay zekâ sağlayıcılarını, yerel modelleri, uzman ajanları ve masaüstü araçlarını; 
-            <strong>kalıcı SQLite hafıza</strong>, <strong>M3 yetki kalkanı</strong> ve fotogerçekçi <strong>NEXUS-01 dijital insan varlığıyla</strong> 
-            tek bir orkestrasyon katmanında birleştiren bağımsız kişisel çalışma ortamıdır.
+          <p class="hero-desc">
+            NEXUS-v2; bir tarayıcı sekmesindeki yapay zekâ kutusu değildir. 
+            Windows masaüstünüzde sizinle çalışan, doğal Türkçe konuşan, konuşmaları hatırlayan, 
+            izin verdiğiniz web ve bilgisayar görevlerini yürüten ve merkezinde fotogerçekçi 
+            <strong>NEXUS-01</strong> dijital insanını barındıran kişisel işletim katmanıdır.
           </p>
 
           <div class="hero-actions">
-            <a href="#cockpit" class="btn btn-primary">
-              <i class="fa-solid fa-terminal"></i>
-              <span>Masaüstü Kokpitini Keşfet</span>
+            <a href="#pricing" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-crown"></i>
+              <span>Ön Sipariş Kontenjanına Katıl</span>
             </a>
-            <a href="#nexus01" class="btn btn-secondary">
+            <a href="#nexus01" class="btn btn-secondary btn-lg">
               <i class="fa-solid fa-user-astronaut"></i>
-              <span>NEXUS-01 Varlık Galerisi</span>
+              <span>NEXUS-01'i İncele</span>
             </a>
           </div>
 
-          <!-- Live Telemetry Strip -->
-          <div class="hero-telemetry-strip">
-            <div class="telemetry-item">
-              <span class="telemetry-label">Native Çekirdek</span>
-              <span class="telemetry-val"><i class="fa-solid fa-bolt"></i> Tauri 2 + Rust</span>
+          <!-- Proof Metrics -->
+          <div class="hero-metrics-row">
+            <div class="hero-metric-item">
+              <span class="metric-val">&lt;50ms</span>
+              <span class="metric-lbl">Viseme Dudak Senkronu</span>
             </div>
-            <div class="telemetry-item">
-              <span class="telemetry-label">Kalıcı Bellek</span>
-              <span class="telemetry-val"><i class="fa-solid fa-database"></i> SQLite M3 Fabric</span>
+            <div class="hero-metric-item">
+              <span class="metric-val">%100 Yerel</span>
+              <span class="metric-lbl">SQLite M3 Bellek Kalkanı</span>
             </div>
-            <div class="telemetry-item">
-              <span class="telemetry-label">Model Mesh</span>
-              <span class="telemetry-val"><i class="fa-solid fa-network-wired"></i> Multi-Provider</span>
+            <div class="hero-metric-item">
+              <span class="metric-val">Fail-Closed</span>
+              <span class="metric-lbl">İzin & Güvenlik Mimarisi</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="metric-val">Tauri v2</span>
+              <span class="metric-lbl">Rust Masaüstü Çekirdeği</span>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Avatar HUD Viewport -->
-        <div class="hero-visual-card">
-          <div class="card-hud-header">
-            <span class="hud-tag"><i class="fa-solid fa-brain"></i> NEXUS-01 // PRESENCE HUD</span>
-            <span class="hud-signal"><i class="fa-solid fa-signal"></i> 99.8% SYNC</span>
-          </div>
+        <!-- Right: Canonical Visual Frame -->
+        <div class="hero-visual-col">
+          <div class="hero-card-frame">
+            <div class="hero-card-header">
+              <div class="hero-status-pill">
+                <span class="status-pulse-dot"></span>
+                <span>NEXUS-01 CANLI VARLIK</span>
+              </div>
+              <span class="hero-latency-badge"><i class="fa-solid fa-bolt"></i> TÜRKÇE SES</span>
+            </div>
 
-          <div class="hero-avatar-viewport">
-            <img src="assets/images/nexus-01-canonical.png" alt="NEXUS-01 Kanonik Dijital İnsan" class="hero-avatar-img">
-            <div class="avatar-hud-overlay">
-              <div class="hud-scanner-bar"></div>
-              
-              <div class="hud-avatar-meta">
-                <div class="avatar-meta-title">
-                  <span>NEXUS-01</span>
-                  <span class="avatar-meta-state"><i class="fa-solid fa-circle-check"></i> CANLI</span>
-                </div>
-                <div style="font-size: 0.78rem; color: #a4b3d6; margin-top: 4px;">
-                  Fotogerçekçi Dijital İnsan · Türkçe Sesli Arayüz & Mimik Senkronu
-                </div>
+            <div class="hero-avatar-media">
+              <img src="assets/images/nexus-01-canonical.png" alt="NEXUS-01 Kanonik Dijital İnsan" class="hero-avatar-img">
+              <div class="hero-hud-scanlines"></div>
+            </div>
 
-                <!-- Audio Waveform Visualization -->
-                <div class="audio-spectrum-vis">
-                  <div class="audio-bar"></div>
-                  <div class="audio-bar"></div>
-                  <div class="audio-bar"></div>
-                  <div class="audio-bar"></div>
-                  <div class="audio-bar"></div>
-                  <div class="audio-bar"></div>
-                  <div class="audio-bar"></div>
-                  <div class="audio-bar"></div>
+            <!-- Voice Interaction Box -->
+            <div class="hero-voice-widget">
+              <button class="voice-play-btn" id="voicePlayTrigger" aria-label="NEXUS Ses Örneğini Dinle">
+                <i class="fa-solid fa-play" id="voiceIcon"></i>
+              </button>
+              <div class="voice-track-info">
+                <div class="voice-title-row">
+                  <span class="voice-name">NEXUS-01 Doğal Ses Yanıtı</span>
+                  <span class="voice-time" id="voiceTime">0:04</span>
                 </div>
-
-                <!-- Live Voice Control Player -->
-                <div class="voice-ctrl-box">
-                  <button class="voice-play-btn" id="voicePlayBtn">
-                    <i class="fa-solid fa-play"></i>
-                    <span>NEXUS-01 Sesini Dinle</span>
-                  </button>
-                  <div class="voice-subtitle-text" id="voiceSubtitle">Tıkla ve dinle...</div>
+                <div class="voice-bars-wrap" id="voiceBars">
+                  <span class="vbar"></span><span class="vbar"></span><span class="vbar"></span>
+                  <span class="vbar"></span><span class="vbar"></span><span class="vbar"></span>
+                  <span class="vbar"></span><span class="vbar"></span><span class="vbar"></span>
+                  <span class="vbar"></span><span class="vbar"></span><span class="vbar"></span>
                 </div>
               </div>
+            </div>
+
+            <div class="hero-card-caption">
+              <span>Kanonik Varlık Kimliği</span>
+              <span style="color: var(--accent-cyan);">1000321941 · Adult Photoreal</span>
             </div>
           </div>
         </div>
@@ -182,115 +173,49 @@
   </section>
 
   <!-- ========================================================================
-       COMPARISON SECTION: LEGACY CHATBOT VS NEXUS-V2
+       COMPARISON: CHATBOT VS. NEXUS OPERATING LAYER
        ======================================================================== -->
   <section class="section section-alt" id="comparison">
     <div class="container">
       <div class="section-head">
         <div class="badge badge-cyan">MİMARİ KIYASLAMA</div>
-        <h2 class="section-title">Sıradan Bir Chatbot mu, Yoksa NEXUS mu?</h2>
+        <h2 class="section-title">Klasik Chatbot Sekmesi Değil, Masaüstü Katmanı</h2>
         <p class="section-desc">
-          Neden basit bir API arayüzünün ötesine geçtik? Kişisel bilişsel işletim sistemi ile sıradan yapay zekâ pencereleri arasındaki fark:
+          ChatGPT veya Gemini gibi harici modeller "NEXUS'un kendisi" değildir; NEXUS'un gerektiğinde kullandığı 
+          değiştirilebilir akıl yürütme kaynaklarıdır. Asıl fark, masaüstünüzdeki tam kontrol ve yerel güçtür.
         </p>
       </div>
 
       <div class="comparison-grid">
-        
-        <!-- Legacy Chatbot Card -->
-        <div class="compare-card compare-card-legacy">
-          <div class="compare-header">
-            <h3 class="compare-title" style="color: #94a3b8;">
-              <i class="fa-regular fa-comments"></i>
-              ChatGPT Plus & Gemini
-            </h3>
-            <span class="badge" style="background: rgba(244, 63, 94, 0.1); color: var(--accent-rose); border-color: rgba(244, 63, 94, 0.3);">
-              $20 / Ay Zorunlu Abonelik
-            </span>
-          </div>
-
-          <ul class="compare-feature-list">
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-xmark compare-icon-bad"></i>
-              <div class="compare-feature-text">
-                <strong>Yüksek & Sürekli Aylık Maliyet</strong>
-                <p>Her ay $20 (yaklaşık 700+ ₺) ödeme zorunluluğu. Kullanmasanız bile her ay kartınızdan çekilir.</p>
-              </div>
-            </li>
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-xmark compare-icon-bad"></i>
-              <div class="compare-feature-text">
-                <strong>Uçucu & Sınırlı Hafıza</strong>
-                <p>Oturumlar uzadıkça eski sohbetleri, finansal tercihlerinizi ve proje kararlarınızı unutur; tekrar tekrar baştan anlatırsınız.</p>
-              </div>
-            </li>
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-xmark compare-icon-bad"></i>
-              <div class="compare-feature-text">
-                <strong>Masaüstü ve Finans Entegrasyonu Yok</strong>
-                <p>Bilgisayarınızdaki dosyalara ve borsa sistemlerine (KAP/BIST) bağımsız erişemez; salt metin penceresinde kilitlidir.</p>
-              </div>
-            </li>
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-xmark compare-icon-bad"></i>
-              <div class="compare-feature-text">
-                <strong>Ruhsuz Metin Yanıtları</strong>
-                <p>Görsel bir varlık, tutarlı bir yüz kimliği ve canlı ses-mimik senkronizasyonu bulunmaz.</p>
-              </div>
-            </li>
+        <div class="comp-card standard">
+          <div class="comp-badge">GELENEKSEL WEB CHATBOTLARI</div>
+          <h3 class="comp-title">Tarayıcı İçi İzole Sohbet</h3>
+          <ul class="comp-list">
+            <li><i class="fa-solid fa-xmark"></i> <span>Masaüstünüzü, dosyalarınızı veya çalışma ortamınızı göremez.</span></li>
+            <li><i class="fa-solid fa-xmark"></i> <span>Her yeni sohbette geçmişinizi ve tercihlerinizi unutur.</span></li>
+            <li><i class="fa-solid fa-xmark"></i> <span>Tek bir bulut sağlayıcısına (OpenAI / Google) bağımlıdır.</span></li>
+            <li><i class="fa-solid fa-xmark"></i> <span>Cansız metin akışı veya mekanik robot sesleri sunar.</span></li>
+            <li><i class="fa-solid fa-xmark"></i> <span>Bilgisayarınızda izinli dahi olsa gerçek bir görev yürütemez.</span></li>
           </ul>
         </div>
 
-        <!-- NEXUS-v2 Card -->
-        <div class="compare-card compare-card-nexus">
-          <div class="compare-header">
-            <h3 class="compare-title" style="color: #fff;">
-              <i class="fa-solid fa-microchip" style="color: var(--accent-cyan);"></i>
-              NEXUS-v2 Cognitive Layer
-            </h3>
-            <span class="badge badge-emerald">
-              <span class="badge-dot"></span>
-              Çok Daha Uygun & Kalıcı
-            </span>
-          </div>
-
-          <ul class="compare-feature-list">
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-check compare-icon-good"></i>
-              <div class="compare-feature-text">
-                <strong>Ekonomik & Esnek Maliyet (BYOK & Yerel Model)</strong>
-                <p>İster kendi ucuz API'nizi kullanın (ayda $1-$2 bile tutabilir), ister ücretsiz yerel modellerle internetsiz ve sınırsız çalışın.</p>
-              </div>
-            </li>
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-check compare-icon-good"></i>
-              <div class="compare-feature-text">
-                <strong>SQLite M3 Asla Unutmayan Kalıcı Hafıza</strong>
-                <p>Aylar önceki borsa pozisyonunuzu, proje hedeflerinizi ve kişisel çalışma tarzınızı SQLite şifreli yerel bellekte tutar.</p>
-              </div>
-            </li>
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-check compare-icon-good"></i>
-              <div class="compare-feature-text">
-                <strong>Gerçek BIST Analizi & Güvenli Masaüstü Kontrolü</strong>
-                <p>KAP bildirimlerini çeker, senaryo analizleri üretir; L0-L4 izin kalkanı ve acil durdurma ile bilgisayarınızda güvenle iş yapar.</p>
-              </div>
-            </li>
-            <li class="compare-feature-item">
-              <i class="fa-solid fa-check compare-icon-good"></i>
-              <div class="compare-feature-text">
-                <strong>Fotogerçekçi NEXUS-01 Dijital İnsan & Ses</strong>
-                <p>Tutarlı yüz kimliği (`1000321941.png`), Türkçe sesli iletişim ve siz konuşurken anında susup dinleyen barge-in akıcılığı.</p>
-              </div>
-            </li>
+        <div class="comp-card nexus-pro">
+          <div class="comp-badge pro">NEXUS-v2 BİLİŞSEL KATMAN</div>
+          <h3 class="comp-title" style="color: var(--accent-cyan);">Kişisel Masaüstü Varlığı</h3>
+          <ul class="comp-list">
+            <li><i class="fa-solid fa-check"></i> <strong>Windows 11 ile Bütünleşik:</strong> Dosyalarınızı, web araştırmalarınızı ve görevlerinizi yönetir.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Kişiye Özel Kalıcı Bellek:</strong> SQLite M3 ile verileriniz kendi bilgisayarınızda saklanır.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Bağımsız Model Mimari:</strong> OpenAI, Claude veya yerel Ollama/Qwen modellerini özgürce yönlendirir.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>NEXUS-01 Dijital İnsan:</strong> Doğal Türkçe konuşan, nefes alan, mimikleri olan fotogerçekçi varlık.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Açık İzin Kalkanı:</strong> Asla arkadan gizlice işlem yapmaz; her kritik eylemde açık onay alır.</li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- ========================================================================
-       NEXUS-01 PRESENCE & VISUAL ASSETS SHOWCASE
+       NEXUS-01 DIGITAL HUMAN SHOWCASE
        ======================================================================== -->
   <section class="section" id="nexus01">
     <div class="container">
@@ -298,63 +223,59 @@
         <div class="badge badge-violet">FOTOGERÇEKÇİ DİJİTAL VARLIK KATMANI</div>
         <h2 class="section-title">NEXUS-01: Masaüstünüzde Yaşayan Yapay Zekâ</h2>
         <p class="section-desc">
-          Sıradan bir chatbot kutusu veya yapay bir filtre değil. Windows ortamınızda sizinle çalışan, 
-          doğal Türkçe konuşan, sesinizi ve çalışma alanınızı anlayan fotogerçekçi görsel zekâ.
+          Kullanıcımız statik bir fotoğraf veya çizgi film karakteri istemedi. NEXUS-01; onaylı tekil kimliğiyle 
+          (`1000321941`), doğal göz kırpan, konuşurken dudakları Türkçe sesle senkron hareket eden yaşayan bir dijital insandır.
         </p>
       </div>
 
-      <!-- Persona Showcase Grid -->
       <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         
-        <!-- 1. Real-time Viseme & Voice -->
+        <!-- 1. Viseme & Speech -->
         <div class="gallery-card">
           <div class="gallery-media">
-            <img src="assets/images/nexus-01-canonical.png" alt="NEXUS-01 Doğal Türkçe Ses ve Dudak Senkronu">
+            <img src="assets/images/nexus-01-canonical.png" alt="NEXUS-01 Doğal Türkçe Ses Senkronu">
             <span class="gallery-tag-pill">CANLI SES SENKRONU</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
           </div>
           <div class="gallery-body">
             <h3 class="gallery-title">Doğal Türkçe Ses & Dudak Senkronu</h3>
             <p class="gallery-desc">
-              Konuştuğunuz anda kelimelerinizi anlar. Gelişmiş viseme motoru sayesinde dudakları ve mimikleri Türkçe fonemlerle kusursuz bir uyumla senkronize olur.
+              Mikrofonunuza konuştuğunuz anda kelimeleri anlar. Viseme motoru sayesinde dudak ve çene hareketleri Türkçe ses dalgalarıyla gecikmesiz senkronize olur.
             </p>
             <div class="gallery-footer-meta">
-              <span><i class="fa-solid fa-bolt"></i> Tepki: &lt;50ms</span>
-              <span><i class="fa-solid fa-waveform-lines"></i> Doğal Fonem</span>
+              <span><i class="fa-solid fa-bolt"></i> &lt;50ms Gecikme</span>
+              <span><i class="fa-solid fa-waveform"></i> Doğal Fonem</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Emotional Mesh & Expression Matrix -->
+        <!-- 2. Emotional Expression -->
         <div class="gallery-card">
           <div class="gallery-media">
             <img src="assets/images/dokuz-ifadeli-portre-kolaji.png" alt="NEXUS-01 Bilişsel Mimik Motoru">
             <span class="gallery-tag-pill">BİLİŞSEL İFADE MOTORU</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
           </div>
           <div class="gallery-body">
             <h3 class="gallery-title">Dinamik Duygusal Mimik Havuzu</h3>
             <p class="gallery-desc">
-              Dinlerken odaklanır, onaylarken tebessüm eder, karmaşık finansal ve yazılımsal veri analizlerinde düşünce moduna geçer. Mekanik değil, canlı bir varlık hissi.
+              Dinlerken odaklanır, onaylarken tebessüm eder, karmaşık veri ve görev analizlerinde düşünce moduna geçer. Mekanik değil, canlı bir varlık hissi verir.
             </p>
             <div class="gallery-footer-meta">
               <span><i class="fa-solid fa-brain"></i> 9 Bilişsel Mod</span>
-              <span><i class="fa-solid fa-heart-pulse"></i> Dinamik Adaptasyon</span>
+              <span><i class="fa-solid fa-heart-pulse"></i> Canlı Adaptasyon</span>
             </div>
           </div>
         </div>
 
-        <!-- 3. Strategic Executive Presence -->
+        <!-- 3. Executive Presence -->
         <div class="gallery-card">
           <div class="gallery-media">
             <img src="assets/images/NEXUS_REF_025_FULL_BODY_FRONT.png" alt="NEXUS-01 Yönetici Varlığı">
-            <span class="gallery-tag-pill">YÖNETİCİ PERSONASI</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
+            <span class="gallery-tag-pill">TAM VÜCUT VARLIĞI</span>
           </div>
           <div class="gallery-body">
             <h3 class="gallery-title">Stratejik Asistan & Masaüstü Varlığı</h3>
             <p class="gallery-desc">
-              BIST hisselerini, şirket bilançolarını, KAP bildirimlerini ve günlük iş akışlarınızı yönetirken masaüstünüzde daima yanınızda duran profesyonel bir çalışma arkadaşı.
+              Masaüstünüzde pencerelerin yanında konumlanır. Web araştırmalarınızı yaparken, raporlarınızı incelerken daima yanınızda duran profesyonel bir çalışma partneri.
             </p>
             <div class="gallery-footer-meta">
               <span><i class="fa-solid fa-display"></i> Windows Masaüstü</span>
@@ -363,12 +284,11 @@
           </div>
         </div>
 
-        <!-- 4. Photorealistic Neural Rendering -->
+        <!-- 4. Neural Skin Physics -->
         <div class="gallery-card">
           <div class="gallery-media">
-            <img src="assets/images/NEXUS_FACE_001_APPROVED_FRONT_UPSCALED.png" alt="NEXUS-01 Fotogerçekçi Cilt ve Işık Fiziği">
+            <img src="assets/images/NEXUS_FACE_001_APPROVED_FRONT_UPSCALED.png" alt="NEXUS-01 Cilt ve Işık Fiziği">
             <span class="gallery-tag-pill">FOTOGERÇEKÇİ FİZİK</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
           </div>
           <div class="gallery-body">
             <h3 class="gallery-title">Doğal Cilt, Göz ve Işıklandırma</h3>
@@ -386,9 +306,8 @@
     </div>
   </section>
 
-
   <!-- ========================================================================
-       COGNITIVE ARCHITECTURE (6 PILLARS)
+       6 COGNITIVE PILLARS ARCHITECTURE
        ======================================================================== -->
   <section class="section section-alt" id="architecture">
     <div class="container">
@@ -404,80 +323,56 @@
         
         <div class="pillar-card">
           <div class="pillar-icon-box"><i class="fa-solid fa-eye"></i></div>
-          <h3 class="pillar-title">1. Identity & Presence Engine</h3>
+          <h3 class="pillar-title">1. Varlık ve Kimlik Motoru</h3>
           <p class="pillar-text">
             NEXUS-01'in kalıcı fotogerçekçi görünümü, ses tonu, doğal Türkçe akıcılığı, konuşurken araya girilebilirlik (barge-in) ve viseme dudak senkronu.
           </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Kanonik Referans Kilidi (`1000321941.png`)</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Türkçe STT / Streaming TTS Pipeline</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> 2.5D Kafa & Mimik State Makinesi</li>
-          </ul>
+          <div class="pillar-tag">NEXUS-01 Presence</div>
         </div>
 
         <div class="pillar-card">
           <div class="pillar-icon-box"><i class="fa-solid fa-database"></i></div>
-          <h3 class="pillar-title">2. Memory & Context Fabric</h3>
+          <h3 class="pillar-title">2. Kalıcı Bellek Kalkanı</h3>
           <p class="pillar-text">
-            Her bilginin tarih, kaynak ve güven skoruyla tutulduğu SQLite temelli bellek. Kullanıcı istediği an hafıza kayıtlarını görüntüleyebilir, düzenleyebilir veya silebilir.
+            Kullanıcıya ait veriler yerel SQLite veritabanında tarih ve kaynak bilgisiyle saklanır. Şeffaftır; istediğiniz an görüntüleyebilir, düzeltebilir veya silebilirsiniz.
           </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Explicit Facts & Proje Hafızası</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Provenance (Kaynak Kökeni) Kaydı</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Kullanıcı Onaylı Kalıcı Silme</li>
-          </ul>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box"><i class="fa-solid fa-network-wired"></i></div>
-          <h3 class="pillar-title">3. Model Mesh & Router</h3>
-          <p class="pillar-text">
-            İşin zorluğuna, maliyetine ve gizlilik ihtiyacına göre en doğru yapay zekâyı seçer. Sağlayıcı kesintilerinde otomatik yedek modele geçer; kullanıcıya durumu bildirir.
-          </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> OpenAI, Gemini, Claude, DeepSeek, xAI</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Yerel LLM Desteği (Ollama / GGUF)</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Bağımsız Çapraz Doğrulama (Critic)</li>
-          </ul>
+          <div class="pillar-tag">SQLite M3 Engine</div>
         </div>
 
         <div class="pillar-card">
           <div class="pillar-icon-box"><i class="fa-solid fa-list-check"></i></div>
-          <h3 class="pillar-title">4. Task Manager & Checkpoints</h3>
+          <h3 class="pillar-title">3. Görev ve Bilgisayar Kullanımı</h3>
           <p class="pillar-text">
-            Uzun süren araştırmalar veya kod görevleri uygulama çökse veya elektrik kesilse bile kaldığı checkpoint'ten devam eder.
+            Doğal dille verilen hedefleri alt adımlara böler. Web araştırması, dosya okuma ve sistem işlemlerini gerçek kanıtlarla yürüten güvenli görev motoru.
           </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Pause / Resume / Recover Mimarisi</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Ölçülebilir Alt Adım Takibi</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Supervisor Koordinasyonu</li>
-          </ul>
+          <div class="pillar-tag">Computer Use & Task Broker</div>
         </div>
 
         <div class="pillar-card">
-          <div class="pillar-icon-box"><i class="fa-solid fa-shield-virus"></i></div>
-          <h3 class="pillar-title">5. Capability Policy & Audit (M3)</h3>
+          <div class="pillar-icon-box"><i class="fa-solid fa-network-wired"></i></div>
+          <h3 class="pillar-title">4. Bağımsız Model Ağı (Router)</h3>
           <p class="pillar-text">
-            Araçlar sadece tanımlı yetenek (capability) sınırları içinde çalışabilir. Yetki iptal edildiğinde (revoke) onaylanmış işlemler bile anında bloke edilir.
+            Tek bir sağlayıcıya mahkum değilsiniz. Yerel Ollama modelleri, OpenAI, Claude veya Gemini arasında akıllı geçiş yapar; çevrimdışıyken bile çalışır.
           </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> SQLite Kalıcı Grant / Revoke</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Prompt Injection Kalkanı</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Tam Denetim (Audit Trail) Günlüğü</li>
-          </ul>
+          <div class="pillar-tag">Model Mesh</div>
         </div>
 
         <div class="pillar-card">
-          <div class="pillar-icon-box"><i class="fa-solid fa-desktop"></i></div>
-          <h3 class="pillar-title">6. Computer Control & Hardware</h3>
+          <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="pillar-title">5. Fail-Closed Güvenlik ve İzinler</h3>
           <p class="pillar-text">
-            Kullanıcı bilgisayarında güvenli ekran görüntüsü, kontrollü klavye/fare kullanımı ve sistem telemetrisi (Intel i5-12500H, RTX 3060 Laptop GPU).
+            LLM'ler sistemde nihai otorite değildir. Kritik dosya, web ve sistem işlemlerinde Rust çekirdeği açık kullanıcı onayı ister; onay verilmezse işlem anında durur.
           </p>
-          <ul class="pillar-spec-list">
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Observe → Plan → Authorize → Act Döngüsü</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Global Acil Durdurma (Emergency Stop)</li>
-            <li class="pillar-spec-item"><i class="fa-solid fa-check"></i> Donanım Kaynak & Isı Takibi</li>
-          </ul>
+          <div class="pillar-tag">L0-L4 Security Shield</div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-certificate"></i></div>
+          <h3 class="pillar-title">6. Kanıt ve Doğrulama Katmanı</h3>
+          <p class="pillar-text">
+            Yapay zekanın ürettiği sonuçlar doğrulanmadan tamamlandı sayılmaz. Üretilen her dosya, özet veya veri çıktısı doğrulanabilir kanıtlarla raporlanır.
+          </p>
+          <div class="pillar-tag">Evidence Verification</div>
         </div>
 
       </div>
@@ -485,121 +380,45 @@
   </section>
 
   <!-- ========================================================================
-       LIVE COCKPIT INTERACTIVE SIMULATION
+       3 DYNAMIC OPERATING MODES (COCKPIT UX)
        ======================================================================== -->
-  <section class="section" id="cockpit">
+  <section class="section" id="modes">
     <div class="container">
       <div class="section-head">
-        <div class="badge badge-cyan">İNTERAKTİF SİMÜLATÖR</div>
-        <h2 class="section-title">NEXUS Masaüstü Canlı Kokpiti</h2>
+        <div class="badge badge-cyan">ADAPTİF MASAÜSTÜ DENEYİMİ</div>
+        <h2 class="section-title">3 Dinamik Çalışma Modu</h2>
         <p class="section-desc">
-          Gerçek masaüstü arayüzümüzün dinamik simülasyonu. Senaryo butonlarına tıklayarak NEXUS orkestrasyonunun gerçek zamanlı çalışma akışını izleyin.
+          NEXUS statik bir kontrol paneli değildir. O anki ihtiyacınıza göre arayüz akıllıca şekil değiştirir.
         </p>
       </div>
 
-      <!-- Cockpit Window Frame -->
-      <div class="cockpit-frame">
+      <div class="pillars-grid">
         
-        <!-- Top Window Header -->
-        <div class="cockpit-top-bar">
-          <div class="window-dots">
-            <div class="dot dot-red"></div>
-            <div class="dot dot-yellow"></div>
-            <div class="dot dot-green"></div>
-          </div>
-          <div class="window-title">
-            <i class="fa-solid fa-terminal"></i>
-            <span>NEXUS-v2 Desktop Core // Runtime Orchestrator (Windows 11 x64)</span>
-          </div>
-          <div class="cockpit-mode-switch">
-            <button class="mode-btn active" data-mode="operations">Operations</button>
-            <button class="mode-btn" data-mode="focus">Focus</button>
-            <button class="mode-btn" data-mode="compact">Compact</button>
-          </div>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-expand"></i></div>
+          <h3 class="pillar-title">1. Odak Modu (Focus Mode)</h3>
+          <p class="pillar-text">
+            NEXUS-01 ve doğal sesli diyalog ekranın merkezindedir. Tüm karmaşık paneller gizlenir. Tıpkı karşınızda oturan gerçek bir insanla sohbet eder gibi saf bir asistan deneyimi.
+          </p>
+          <div class="pillar-tag">Doğal Diyalog & Ses</div>
         </div>
 
-        <!-- Cockpit Inner Layout: 3 Columns -->
-        <div class="cockpit-inner-layout">
-          
-          <!-- Left Rail: App Navigation -->
-          <aside class="cockpit-sidebar">
-            <div class="sidebar-heading">Gezinti & Modüller</div>
-            <ul class="cockpit-nav-items">
-              <li><button class="cockpit-nav-btn active"><i class="fa-solid fa-house"></i> Ana Sayfa / Home</button></li>
-              <li><button class="cockpit-nav-btn"><i class="fa-solid fa-list-check"></i> Görevler / Tasks</button></li>
-              <li><button class="cockpit-nav-btn"><i class="fa-solid fa-memory"></i> Bellek / Memory</button></li>
-              <li><button class="cockpit-nav-btn"><i class="fa-solid fa-network-wired"></i> Model Mesh</button></li>
-              <li><button class="cockpit-nav-btn"><i class="fa-solid fa-chart-line"></i> Finans / BIST</button></li>
-              <li><button class="cockpit-nav-btn"><i class="fa-solid fa-shield-halved"></i> Güvenlik / M3</button></li>
-              <li><button class="cockpit-nav-btn"><i class="fa-solid fa-microchip"></i> Donanım Tanı</button></li>
-            </ul>
-          </aside>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-sliders"></i></div>
+          <h3 class="pillar-title">2. Operasyon Modu (Cockpit Mode)</h3>
+          <p class="pillar-text">
+            NEXUS bir görev yürütürken (araştırma, dosya inceleme, veri sentezi); gerçek görev ilerlemesi, hafıza kayıtları ve onay pencereleri dinamik paneller olarak açılır.
+          </p>
+          <div class="pillar-tag">Görev & İnceleme Paneli</div>
+        </div>
 
-          <!-- Center: Scenario Picker + Terminal Feed -->
-          <main class="cockpit-center-console">
-            
-            <div class="console-scenario-picker">
-              <span class="picker-label">Senaryo Seç:</span>
-              <button class="scenario-pill active" data-scenario="bist_analysis">BIST / KAP Analizi</button>
-              <button class="scenario-pill" data-scenario="security_audit">M3 Yetki İptali</button>
-              <button class="scenario-pill" data-scenario="web_research">Web Alıntı Pipeline</button>
-              <button class="scenario-pill" data-scenario="avatar_sync">Viseme Dudak Senkronu</button>
-            </div>
-
-            <!-- Terminal Output Window -->
-            <div class="console-terminal-body" id="terminalBody">
-              <!-- Dynamically populated via assets/js/main.js -->
-            </div>
-
-            <!-- Interactive Console Input -->
-            <div class="console-bottom-input">
-              <input type="text" class="console-input-mock" id="mockPromptInput" placeholder="NEXUS'a bir komut verin (Örn: GENKM teknik kırılımını kontrol et)...">
-              <button class="btn btn-primary" id="mockSubmitBtn" style="padding: 9px 18px; font-size: 0.8rem;">
-                <i class="fa-solid fa-paper-plane"></i>
-                <span>Çalıştır</span>
-              </button>
-            </div>
-
-          </main>
-
-          <!-- Right Rail: Telemetry & Hardware Stats -->
-          <aside class="cockpit-right-rail">
-            <div class="stat-widget">
-              <div class="stat-widget-title">
-                <span>CPU / Intel i5-12500H</span>
-                <span style="color: var(--accent-cyan);">18%</span>
-              </div>
-              <div class="stat-progress-bar"><div class="stat-fill-cyan" style="width: 18%;"></div></div>
-            </div>
-
-            <div class="stat-widget">
-              <div class="stat-widget-title">
-                <span>RAM Kullanımı</span>
-                <span style="color: var(--accent-cyan);">6.2 / 16 GB</span>
-              </div>
-              <div class="stat-progress-bar"><div class="stat-fill-cyan" style="width: 38%;"></div></div>
-            </div>
-
-            <div class="stat-widget">
-              <div class="stat-widget-title">
-                <span>GPU / RTX 3060 Laptop</span>
-                <span style="color: var(--accent-purple);">2.1 / 6.0 GB</span>
-              </div>
-              <div class="stat-progress-bar"><div class="stat-fill-purple" style="width: 35%;"></div></div>
-            </div>
-
-            <div class="stat-widget">
-              <div class="stat-widget-title">
-                <span>M3 Güvenlik Durumu</span>
-                <span style="color: var(--accent-emerald);">M3_ENFORCED</span>
-              </div>
-              <div style="font-size: 0.72rem; color: #8e9dbf; margin-top: 6px;">
-                Aktif Grants: 14<br>
-                Revoked Tokens: 3 (Audit Logged)
-              </div>
-            </div>
-          </aside>
-
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-window-minimize"></i></div>
+          <h3 class="pillar-title">3. Kompakt Mod (Work Mode)</h3>
+          <p class="pillar-text">
+            Masaüstünüzde kod yazarken, rapor hazırlarken veya tarayıcıda gezinirken ekranınızı kaplamayan, köşede sessizce bekleyen ve tek tuşla yardıma koşan hafif mod.
+          </p>
+          <div class="pillar-tag">Masaüstü Yan Çubuğu</div>
         </div>
 
       </div>
@@ -607,199 +426,7 @@
   </section>
 
   <!-- ========================================================================
-       INTERACTIVE FINANCE / BIST ANALYZER SECTION
-       ======================================================================== -->
-  <section class="section section-alt" id="finance">
-    <div class="container">
-      <div class="section-head">
-        <div class="badge badge-emerald">ÖZEL ANALİZ MODÜLÜ</div>
-        <h2 class="section-title">İnteraktif BIST & Şirket Analiz Motoru</h2>
-        <p class="section-desc">
-          Finansal analiz yalnızca mum grafiği değildir. Şirketin bilanço nakit akışı, KAP duyuruları, fiyat/hacim yapısı ve üç farklı senaryoya dayalı bağımsız değerlendirme:
-        </p>
-      </div>
-
-      <div class="finance-showcase-box">
-        
-        <!-- Header row -->
-        <div class="finance-nav-row">
-          <div class="finance-stock-badge">
-            <div class="stock-avatar">GK</div>
-            <div class="stock-info">
-              <h4>GENKM · Gentaş Kimya San. A.Ş.</h4>
-              <span>BIST Kimya & İleri Malzemeler · Zaman Damgası: 2026-10-15</span>
-            </div>
-          </div>
-
-          <!-- Scenario Buttons -->
-          <div class="finance-scenario-btns">
-            <button class="fin-btn active" data-fin="bull"><i class="fa-solid fa-arrow-trend-up"></i> Boğa Kırılımı</button>
-            <button class="fin-btn" data-fin="base"><i class="fa-solid fa-scale-balanced"></i> Baz Senaryo</button>
-            <button class="fin-btn" data-fin="bear"><i class="fa-solid fa-shield-halved"></i> Ayı Savunması</button>
-          </div>
-        </div>
-
-        <!-- Dynamic Content Grid -->
-        <div class="finance-content-grid">
-          
-          <div class="fin-report-card">
-            <div class="fin-report-title" id="finReportTitle">
-              <i class="fa-solid fa-chart-line"></i> BOĞA SENARYOSU — Hacimli Direnç Kırılımı
-            </div>
-            <p class="fin-report-body" id="finReportBody">
-              Bilanço nakit pozisyonundaki artış ve KAP üzerinde açıklanan yeni ihracat siparişi hisse üzerinde pozitif katalizör oluşturuyor. 120 günlük hareketli ortalamanın üzerine hacimli geçiş durumunda momentum artışı öngörülmektedir.
-            </p>
-            <div style="margin-top: 20px; font-size: 0.76rem; font-family: var(--font-mono); color: var(--text-dim);">
-              <i class="fa-solid fa-circle-info"></i> Yatırım tavsiyesi değildir. Kanıta dayalı olasılık ve risk analizidir.
-            </div>
-          </div>
-
-          <div class="fin-metrics-col">
-            <div class="fin-metric-tile">
-              <span class="label">Fiyat / Kazanç (F/K)</span>
-              <span class="val" id="metricFk">9.4</span>
-            </div>
-            <div class="fin-metric-tile">
-              <span class="label">Piyasa Değeri / Defter (PD/DD)</span>
-              <span class="val" id="metricPddd">1.85</span>
-            </div>
-            <div class="fin-metric-tile">
-              <span class="label">Net Nakit Pozisyonu</span>
-              <span class="val" style="color: var(--accent-emerald);" id="metricNakit">+142M ₺</span>
-            </div>
-            <div class="fin-metric-tile">
-              <span class="label">Takip Seviyesi (Direnç)</span>
-              <span class="val" style="color: var(--accent-cyan);" id="metricDirenc">48.50 ₺</span>
-            </div>
-            <div class="fin-metric-tile">
-              <span class="label">Kritik Eşik (Destek)</span>
-              <span class="val" style="color: var(--accent-rose);" id="metricDestek">42.10 ₺</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       AGENT ROSTER SECTION
-       ======================================================================== -->
-  <section class="section" id="agents">
-    <div class="container">
-      <div class="section-head">
-        <div class="badge badge-violet">UZMANLIK KATMANI</div>
-        <h2 class="section-title">Özel Görev Uzmanı Ajanlar</h2>
-        <p class="section-desc">
-          Her ajan sadece bir prompt değildir. Tanımlı girdi/çıktı şemasına, risk sınırlarına, bütçe kısıtlarına ve bağımsız doğrulama şartlarına sahiptir.
-        </p>
-      </div>
-
-      <div class="agent-grid">
-        
-        <div class="agent-card">
-          <div class="agent-header">
-            <div class="agent-icon"><i class="fa-solid fa-sitemap"></i></div>
-            <span class="agent-risk-pill risk-l1">Risk: L1</span>
-          </div>
-          <h3 class="agent-name">Planner / Supervisor</h3>
-          <p class="agent-desc">
-            Karmaşık hedefleri küçük alt görevlere böler, uzman ajanlara dağıtır ve nihai sonuçları birleştirerek doğrular.
-          </p>
-          <div class="agent-capabilities">
-            <span class="agent-cap">Task DAG</span>
-            <span class="agent-cap">Recovery Checkpoint</span>
-            <span class="agent-cap">Agent Router</span>
-          </div>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-header">
-            <div class="agent-icon"><i class="fa-solid fa-chart-pie"></i></div>
-            <span class="agent-risk-pill risk-l1">Risk: L1</span>
-          </div>
-          <h3 class="agent-name">Finance Analyst</h3>
-          <p class="agent-desc">
-            BIST & ABD piyasalarında KAP bildirimleri, bilanço nakit akışı, fiyat/hacim hareketleri ve üç senaryolu (boğa/baz/ayı) tarafsız analiz üretir.
-          </p>
-          <div class="agent-capabilities">
-            <span class="agent-cap">KAP Doğrulama</span>
-            <span class="agent-cap">Bilanço Analizi</span>
-            <span class="agent-cap">Senaryo Matrisi</span>
-          </div>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-header">
-            <div class="agent-icon"><i class="fa-solid fa-code"></i></div>
-            <span class="agent-risk-pill risk-l2">Risk: L2</span>
-          </div>
-          <h3 class="agent-name">Coding Agent</h3>
-          <p class="agent-desc">
-            Mevcut mimariyi koruyarak odaklı kod patch'leri üretir, testleri koşturur ve değişiklikleri checkpoint altına alır.
-          </p>
-          <div class="agent-capabilities">
-            <span class="agent-cap">Patch / Diff</span>
-            <span class="agent-cap">Test Runner</span>
-            <span class="agent-cap">Git Protection</span>
-          </div>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-header">
-            <div class="agent-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <span class="agent-risk-pill risk-l0">Risk: L0</span>
-          </div>
-          <h3 class="agent-name">Security & Audit Agent</h3>
-          <p class="agent-desc">
-            Yetki sınırlarını, gizli anahtar sızıntılarını, prompt injection girişimlerini ve capability izolasyonunu bağımsız denetler.
-          </p>
-          <div class="agent-capabilities">
-            <span class="agent-cap">Fail-Closed Check</span>
-            <span class="agent-cap">Prompt Injection Filter</span>
-            <span class="agent-cap">SQLite M3 Audit</span>
-          </div>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-header">
-            <div class="agent-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <span class="agent-risk-pill risk-l1">Risk: L1</span>
-          </div>
-          <h3 class="agent-name">Web Research Agent</h3>
-          <p class="agent-desc">
-            Gerçek web araması yapar, birden fazla kaynağı karşılaştırır, yayın tarihi ile olay tarihini ayırır ve alıntılı rapor hazırlar.
-          </p>
-          <div class="agent-capabilities">
-            <span class="agent-cap">Citations / Alıntılar</span>
-            <span class="agent-cap">Kaynak Güven Skoru</span>
-            <span class="agent-cap">Karşılaştırma</span>
-          </div>
-        </div>
-
-        <div class="agent-card">
-          <div class="agent-header">
-            <div class="agent-icon"><i class="fa-solid fa-desktop"></i></div>
-            <span class="agent-risk-pill risk-l3">Risk: L3</span>
-          </div>
-          <h3 class="agent-name">Computer Control Agent</h3>
-          <p class="agent-desc">
-            Kullanıcının masaüstünü ekran görüntüsünden anlayıp izinli eylemler yürütür. Her adım bağımsız doğrulanır.
-          </p>
-          <div class="agent-capabilities">
-            <span class="agent-cap">Observe-Act-Verify</span>
-            <span class="agent-cap">Emergency Stop</span>
-            <span class="agent-cap">Pencere Kontrolü</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       SECURITY CONTRACT & PHILOSOPHY
+       SECURITY CONSTITUTION
        ======================================================================== -->
   <section class="section section-alt" id="security">
     <div class="container">
@@ -807,7 +434,7 @@
         <div class="badge badge-emerald">SAVUNMA MİMARİSİ</div>
         <h2 class="section-title">NEXUS Güvenlik Sözleşmesi</h2>
         <p class="section-desc">
-          Yapay zekâ modellerine körü körüne güvenilmez. Güvenlik ilkeleri işletim sistemi ve Rust çekirdeği düzeyinde zorlanır.
+          Yapay zekâ modellerine körü körüne güvenilmez. Güvenlik kuralları işletim sistemi ve Rust çekirdeği düzeyinde zorlanır.
         </p>
       </div>
 
@@ -815,22 +442,21 @@
         <div class="pillar-card">
           <h3 class="pillar-title"><i class="fa-solid fa-ban" style="color: var(--accent-rose); margin-right: 8px;"></i> Tehlikeli Bypass Yasaktır</h3>
           <p class="pillar-text">
-            `--dangerously-skip-permissions` veya güvenlik kontrollerini devre dışı bırakan geçici yamalar yasaktır. 
-            Testi geçirmek için güvenlik kuralları gevşetilmez.
+            Güvenlik kontrollerini devre dışı bırakan gizli arka kapılar veya geçici yamalar yasaktır. Testi geçirmek için güvenlik kuralları gevşetilmez.
           </p>
         </div>
 
         <div class="pillar-card">
-          <h3 class="pillar-title"><i class="fa-solid fa-fingerprint" style="color: var(--accent-cyan); margin-right: 8px;"></i> Subject-Scoped Yetkiler</h3>
+          <h3 class="pillar-title"><i class="fa-solid fa-fingerprint" style="color: var(--accent-cyan); margin-right: 8px;"></i> Gizli Kamera / Mikrofon Yok</h3>
           <p class="pillar-text">
-            Bir oturuma veya ajana verilen yetki diğerine devredilemez. Yetkiler SQLite içinde zaman damgalı tutulur ve süresi dolunca otomatik düşer.
+            Kamera kapalıyken "seni görüyorum" demek kesinlikle yasaktır. Mikrofon sadece açıkça konuşmak istediğinizde devreye girer; arka planda gizli dinleme yapılamaz.
           </p>
         </div>
 
         <div class="pillar-card">
-          <h3 class="pillar-title"><i class="fa-solid fa-file-shield" style="color: var(--accent-emerald); margin-right: 8px;"></i> Kalıcı Audit Log</h3>
+          <h3 class="pillar-title"><i class="fa-solid fa-file-shield" style="color: var(--accent-emerald); margin-right: 8px;"></i> Açık İnsan Onayı (Human-in-the-Loop)</h3>
           <p class="pillar-text">
-            Her yetki verme (grant), geri alma (revoke) ve çalıştırma girişimi sistem yeniden başlasa bile silinmeyen SQLite kayıtlarında korunur.
+            Kritik dosyaları değiştirme, dışarı veri gönderme veya sistem komutları çalıştırma adımlarında ekranda açık onay penceresi çıkar. Onay vermeden hiçbir işlem yürümez.
           </p>
         </div>
       </div>
@@ -838,94 +464,22 @@
   </section>
 
   <!-- ========================================================================
-       STATUS & GAP MATRIX TABLE
-       ======================================================================== -->
-  <section class="section" id="status">
-    <div class="container">
-      <div class="section-head">
-        <div class="badge badge-cyan">MÜHENDİSLİK ŞEFFAFLIĞI</div>
-        <h2 class="section-title">Canlı Doğrulama & Gap Matrisi</h2>
-        <p class="section-desc">
-          Kodlanmayan hiçbir özelliği tamamlanmış saymıyoruz. Mevcut masaüstü test kanıtlarına dayanan gerçek durum tablosu:
-        </p>
-      </div>
-
-      <div class="table-responsive">
-        <table class="status-table">
-          <thead>
-            <tr>
-              <th>Modül / Yetenek</th>
-              <th>Şartname Gereksinimi</th>
-              <th>Mevcut Durum</th>
-              <th>Kanıt Düzeyi</th>
-              <th>Sonraki Adım</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>M3 SQLite Capability</strong></td>
-              <td>Kalıcı grant/revoke & subject isolation</td>
-              <td><span class="status-badge status-verified"><i class="fa-solid fa-check"></i> Doğrulandı</span></td>
-              <td>Windows Desktop WebView2 E2E</td>
-              <td>Audit UI görselleştirme paneli</td>
-            </tr>
-            <tr>
-              <td><strong>NEXUS-01 Görsel Kimlik</strong></td>
-              <td>`1000321941.png` kanonik tutarlılık</td>
-              <td><span class="status-badge status-verified"><i class="fa-solid fa-check"></i> Doğrulandı</span></td>
-              <td>Kanonik Asset & Poz Matrisi</td>
-              <td>Gerçek zamanlı render hattı entegrasyonu</td>
-            </tr>
-            <tr>
-              <td><strong>Memory Fabric (Bellek)</strong></td>
-              <td>Tarihli, kaynaklı, kullanıcı kontrollü hafıza</td>
-              <td><span class="status-badge status-verified"><i class="fa-solid fa-check"></i> Kısmi / Doğrulandı</span></td>
-              <td>Session isolation testleri geçti</td>
-              <td>Kullanıcı doğrudan silme/düzenleme arayüzü</td>
-            </tr>
-            <tr>
-              <td><strong>Canlı Ses & Viseme Senkronu</strong></td>
-              <td>Doğal Türkçe STT/TTS ve ağız hareketi</td>
-              <td><span class="status-badge status-progress"><i class="fa-solid fa-spinner fa-spin"></i> Geliştirmede</span></td>
-              <td>Pocket-TTS & 2.5D prototipleri</td>
-              <td>Barge-in ve streaming lip-sync</td>
-            </tr>
-            <tr>
-              <td><strong>Model Mesh / Router</strong></td>
-              <td>Çoklu model sağlayıcı & fallback</td>
-              <td><span class="status-badge status-progress"><i class="fa-solid fa-spinner fa-spin"></i> Geliştirmede</span></td>
-              <td>Adapter arayüzleri hazır</td>
-              <td>Canlı API completion streaming</td>
-            </tr>
-            <tr>
-              <td><strong>Computer Control UX</strong></td>
-              <td>Observe-Act-Verify & Acil Durdurma</td>
-              <td><span class="status-badge status-planned"><i class="fa-solid fa-clock"></i> Planlanan</span></td>
-              <td>Mimari şartname onaylandı</td>
-              <td>İzole sandbox ve ekran okuma modülü</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       PRICING & COMMERCIAL TIERS SECTION
+       PRICING & PRE-ORDER SECTION
        ======================================================================== -->
   <section class="section" id="pricing">
     <div class="container">
       <div class="section-head">
-        <div class="badge badge-cyan">LİSANSLAR & ERKEN ERİŞİM</div>
-        <h2 class="section-title">Şeffaf Lisans & Fiyatlandırma</h2>
+        <div class="badge badge-cyan">ERKEN ERİŞİM & ÖN SİPARİŞ KONTENJANI</div>
+        <h2 class="section-title">Şeffaf Lisans & Ön Sipariş</h2>
         <p class="section-desc">
-          NEXUS-v2'yi ister topluluk sürümüyle ücretsiz kullanın, ister fotogerçekçi NEXUS-01 dijital insan ve BIST analiz motorunu içeren Pro lisansa yükseltin.
+          NEXUS-v2 kapalı kaynak, donanım kilitli ticari bir masaüstü yazılımıdır. 
+          İlk 100 destekçiye özel indirimli kontenjanda yerinizi ayırtın.
         </p>
       </div>
 
       <div class="pricing-grid">
         
-        <!-- Tier 1: Pioneer Early Access -->
+        <!-- Tier 1: Pioneer -->
         <div class="pricing-card">
           <div class="pricing-header">
             <h3 class="pricing-plan-name">Pioneer / Ön Sipariş</h3>
@@ -942,7 +496,7 @@
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>NEXUS-01 Dijital İnsan Varlık Arayüzü</span></li>
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>SQLite M3 Kalıcı Provenance Hafızası</span></li>
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Model Mesh (Hibrit Sağlayıcı Yönlendirici)</span></li>
-            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>L0-L4 Fail-Closed Güvenlik ve İzin Kalkanı</span></li>
+            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Fail-Closed Güvenlik ve İzin Kalkanı</span></li>
           </ul>
 
           <div class="pricing-cta-wrap">
@@ -955,7 +509,7 @@
                     <i class="fa-solid fa-paper-plane"></i>
                   </button>
                 </div>
-                <div class="waitlist-hint"><i class="fa-solid fa-clock"></i> Lisans hazır olduğunda size bildireceğiz</div>
+                <div class="waitlist-hint"><i class="fa-solid fa-clock"></i> Kontenjan açıldığında bildirim alın</div>
               </form>
               <div class="waitlist-success" style="display:none;">
                 <i class="fa-solid fa-circle-check" style="color:var(--accent-emerald);font-size:1.3rem;"></i>
@@ -965,26 +519,26 @@
           </div>
         </div>
 
-        <!-- Tier 2: NEXUS Pro (Popular) -->
+        <!-- Tier 2: NEXUS Pro -->
         <div class="pricing-card popular">
           <div class="popular-badge-pill">EN ÇOK TERCİH EDİLEN</div>
           <div class="pricing-header">
             <h3 class="pricing-plan-name" style="color: var(--accent-cyan);">NEXUS Pro</h3>
-            <p class="pricing-plan-desc">Tam bilişsel ekosistem, fotogerçekçi avatar ve BIST finans analizi.</p>
+            <p class="pricing-plan-desc">Tam bilişsel ekosistem, fotogerçekçi avatar ve gelişmiş görev motoru.</p>
             <div class="price-box">
               <span class="price-currency">$</span>
               <span class="price-amount">29</span>
-              <span class="price-period">/ Aylık Lisans (veya 790 ₺)</span>
+              <span class="price-period">/ Aylık Lisans</span>
             </div>
           </div>
 
           <ul class="pricing-features-list">
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>NEXUS-01 Fotogerçekçi Canlı Dijital İnsan</strong></li>
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>Doğal Türkçe Ses & Viseme Dudak Senkronu</strong></li>
-            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>BIST / KAP & Şirket Finansal Analiz Motoru</strong></li>
-            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>SQLite M3 Provenance Kalıcı Hafıza Fabric</strong></li>
-            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>Model Mesh (Gemini + GPT-4o + Claude Hibrit)</strong></li>
-            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>L0-L4 Fail-Closed Güvenlik ve İzin Kalkanı</span></li>
+            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>SQLite M3 Provenance Kalıcı Hafıza Katmanı</strong></li>
+            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>Model Mesh (Yerel Ollama + Cloud Hibrit)</strong></li>
+            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <strong>Gelişmiş Bilgisayar ve Görev Yürütme Motoru</strong></li>
+            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Fail-Closed Güvenlik ve İzin Kalkanı</span></li>
           </ul>
 
           <div class="pricing-cta-wrap">
@@ -997,7 +551,7 @@
                     <i class="fa-solid fa-crown"></i>
                   </button>
                 </div>
-                <div class="waitlist-hint"><i class="fa-solid fa-bolt"></i> En çok tercih edilen plan — sınırlı erken erişim</div>
+                <div class="waitlist-hint"><i class="fa-solid fa-bolt"></i> En çok tercih edilen ön sipariş planı</div>
               </form>
               <div class="waitlist-success" style="display:none;">
                 <i class="fa-solid fa-circle-check" style="color:var(--accent-emerald);font-size:1.3rem;"></i>
@@ -1011,7 +565,7 @@
         <div class="pricing-card">
           <div class="pricing-header">
             <h3 class="pricing-plan-name">Lifetime / Ömür Boyu</h3>
-            <p class="pricing-plan-desc">Tek seferlik ödeme ile gelecekteki tüm v2.x ve v3.x sürümlerine sınırsız erişim.</p>
+            <p class="pricing-plan-desc">Tek seferlik ödeme ile gelecekteki tüm sürümlere sınırsız erişim.</p>
             <div class="price-box">
               <span class="price-currency">$</span>
               <span class="price-amount">149</span>
@@ -1022,9 +576,9 @@
           <ul class="pricing-features-list">
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Tüm NEXUS Pro Özellikleri Dahil</span></li>
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Gelecek Tüm Sürümlere Ömür Boyu Güncelleme</span></li>
-            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Özel Ajan ve Masaüstü Araçları Geliştirme SDK</span></li>
+            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Özel Ajan ve Araç Geliştirme İzinleri</span></li>
             <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Ticari / İş Yeri Kullanım Lisansı</span></li>
-            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Öncelikli VIP Destek ve Erken Güncellemeler</span></li>
+            <li class="pricing-feature-item"><i class="fa-solid fa-check"></i> <span>Öncelikli VIP Geliştirici Desteği</span></li>
           </ul>
 
           <div class="pricing-cta-wrap">
@@ -1037,7 +591,7 @@
                     <i class="fa-solid fa-infinity"></i>
                   </button>
                 </div>
-                <div class="waitlist-hint"><i class="fa-solid fa-gem"></i> Tek seferlik — ömür boyu tüm güncellemeler dahil</div>
+                <div class="waitlist-hint"><i class="fa-solid fa-gem"></i> Tek seferlik ömür boyu lisans</div>
               </form>
               <div class="waitlist-success" style="display:none;">
                 <i class="fa-solid fa-circle-check" style="color:var(--accent-emerald);font-size:1.3rem;"></i>
@@ -1049,9 +603,9 @@
 
       </div>
 
-      <!-- Trust Badges Bar -->
+      <!-- Trust Badges -->
       <div class="trust-badges-row">
-        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> <span>Lemon Squeezy & Stripe Güvencesi</span></div>
+        <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> <span>Güvenli Ön Sipariş Doğrulaması</span></div>
         <div class="trust-item"><i class="fa-solid fa-key"></i> <span>Donanım Kilitli Dijital Lisans (Kopya Korumalı)</span></div>
         <div class="trust-item"><i class="fa-solid fa-bolt"></i> <span>Anında Otomatik Anahtar & İndirme Teslimatı</span></div>
         <div class="trust-item"><i class="fa-solid fa-headset"></i> <span>Birebir Geliştirici & Topluluk Desteği</span></div>
@@ -1060,186 +614,78 @@
   </section>
 
   <!-- ========================================================================
-       TESTIMONIALS & SOCIAL PROOF SECTION
+       FAQ (SIKÇA SORULAN SORULAR)
        ======================================================================== -->
-  <section class="section section-alt" id="reviews">
-    <div class="container">
-      <div class="section-head">
-        <div class="badge badge-violet">ERKEN TEST KULLANICILARI</div>
-        <h2 class="section-title">Geliştiriciler ve Yatırımcılar Ne Diyor?</h2>
-        <p class="section-desc">
-          NEXUS-v2'yi erken aşamada deneyimleyen bağımsız kullanıcıların değerlendirmeleri:
-        </p>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testi-card">
-          <div class="testi-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testi-quote">
-            "Sıradan bir ChatGPT sekmesinde her şeyi baştan anlatmaktan bıkmıştım. NEXUS'un SQLite hafızası sayesinde geçen haftaki borsa analizimi ve yatırım tercihlerimi tek kelimeyle hatırladı. İnanılmaz bir zaman tasarrufu."
-          </p>
-          <div class="testi-user">
-            <div class="testi-avatar">EK</div>
-            <div class="testi-meta">
-              <h5>Emre K.</h5>
-              <span>BIST Yatırımcısı & Finans Analisti</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testi-quote">
-            "L0-L4 izin kalkanı ve 'LLM otorite değildir' yaklaşımı tam aradığım şeydi. Yapay zekânın bilgisayarımda izinsiz dosya silmesini veya komut çalıştırmasını Rust seviyesinde engelliyor. Gerçek bir mühendislik ürünü."
-          </p>
-          <div class="testi-user">
-            <div class="testi-avatar">BT</div>
-            <div class="testi-meta">
-              <h5>Burak T.</h5>
-              <span>Kıdemli Yazılım Mimarı (Rust / Tauri)</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="testi-quote">
-            "NEXUS-01'in Türkçe konuşma tonu ve araya girildiğinde anında susup dinlemeye geçmesi çok doğal. Karşınızda bir yazılım değil, yaşayan bir asistan varmış hissini ilk kez bu kadar net aldım."
-          </p>
-          <div class="testi-user">
-            <div class="testi-avatar">SA</div>
-            <div class="testi-meta">
-              <h5>Selin A.</h5>
-              <span>Dijital İçerik Üreticisi</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       FAQ (SIKÇA SORULAN SORULAR) SECTION
-       ======================================================================== -->
-  <section class="section" id="faq">
+  <section class="section section-alt" id="faq">
     <div class="container">
       <div class="section-head">
         <div class="badge badge-cyan">MERAK EDİLENLER</div>
         <h2 class="section-title">Sıkça Sorulan Sorular</h2>
         <p class="section-desc">
-          NEXUS-v2'nin kullanımı, lisanslama, ödeme ve kurulum süreçleri hakkında tüm yanıtlar:
+          NEXUS-v2 mimarisi, güvenliği ve çalışma prensipleri hakkında en net yanıtlar:
         </p>
       </div>
 
       <div class="faq-grid">
         <div class="faq-item active">
           <div class="faq-question">
-            <span>NEXUS-v2 bilgisayarıma nasıl kurulur?</span>
-            <i class="fa-solid fa-chevron-down"></i>
+            <span>NEXUS-v2'nin ChatGPT veya Claude'dan temel farkı nedir?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
           </div>
           <div class="faq-answer">
-            NEXUS-v2, Windows 11 (x64) için tek tıklamayla kurulan hafif bir yerel masaüstü uygulamasıdır (Tauri 2 + Rust). Satın alma işleminin ardından anında kurulum dosyası (`nexus-setup.exe`) ve kişisel lisans anahtarınız e-posta adresinize iletilir.
+            <p>
+              ChatGPT ve Claude yalnızca bir tarayıcı sekmesinde yaşayan kapalı sohbet motorlarıdır; bilgisayarınızdaki dosyalara erişemez, kalıcı yerel veritabanı tutamaz ve masaüstü görevleri yürütemez. NEXUS-v2 ise Windows 11 üzerinde çalışan yerel bir işletim katmanıdır. Harici modelleri yalnızca gerektiğinde hesaplama aracı olarak kullanır; hafızası, güvenliği ve fotogerçekçi NEXUS-01 asistanı doğrudan sizin bilgisayarınızda barınır.
+            </p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span>Kendi yapay zekâ (API) anahtarlarımı kullanabilir miyim?</span>
-            <i class="fa-solid fa-chevron-down"></i>
+            <span>Kişisel verilerim veya konuşmalarım şirketlere satılır mı?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
           </div>
           <div class="faq-answer">
-            Evet! NEXUS tam bir BYOK (Bring Your Own Key) mimarisini destekler. Kendi OpenAI, Google Gemini, Anthropic veya yerel Ollama bağlantınızı ekleyebilirsiniz. İstemediğiniz hiçbir veri dışarıya gönderilmez.
+            <p>
+              Kesinlikle hayır. NEXUS-v2 "Fail-Closed" ve "Local-First" güvenlik anayasasıyla geliştirilmiştir. Kalıcı hafıza SQLite veritabanında tamamen yerel diskte şifrelenir. Gizli kamera veya mikrofon kaydı yapılmaz; izniniz olmadan tek bir bayt dahi dışarıya aktarılmaz.
+            </p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span>Ödeme yaptıktan sonra lisansımı ve faturamı nasıl alırım?</span>
-            <i class="fa-solid fa-chevron-down"></i>
+            <span>NEXUS-01 gerçekten canlı mı yoksa sadece dönen bir video mu?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
           </div>
           <div class="faq-answer">
-            Kredi kartı, banka kartı veya havale ile yapılan ödemeler 256-Bit SSL korumalı altyapı üzerinden anında işlenir. Lisans anahtarınız hem ödeme ekranında gösterilir hem de kayıtlı e-postanıza resmî fatura ile birlikte gönderilir.
+            <p>
+              NEXUS-01 dönen bir video veya çizgi film avatarı değildir. Konuştuğunuz anda sesinizi analiz eden, doğal nefes ve göz kırpma reflekslerine sahip olan ve söylediği Türkçe kelimelere göre dudakları milisaniyelik senkronize hareket eden gerçek zamanlı bir dijital insan motorudur.
+            </p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span>Verilerim ve finansal bilgilerim güvende mi?</span>
-            <i class="fa-solid fa-chevron-down"></i>
+            <span>Programı satın aldığımda başkası kopyalayabilir mi?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
           </div>
           <div class="faq-answer">
-            Kesinlikle. NEXUS verilerinizi merkezi bir bulut sunucusuna satmaz veya saklamaz. Hafıza ve denetim kayıtları tamamen sizin bilgisayarınızdaki şifreli SQLite veritabanında (`C:\NEXUS-v2`) yerel olarak tutulur.
+            <p>
+              Hayır. NEXUS-v2 ticari kapalı kaynak bir yazılımdır ve Hardware ID (Donanım Kimliği) korumasıyla gelir. Satın aldığınız lisans anahtarı yalnızca sizin bilgisayarınızın donanımına kilitlenir; dosyalar başka bir bilgisayara kopyalansa dahi izinsiz çalıştırılamaz.
+            </p>
           </div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span>Yazılımın çalınma veya lisansın kopyalanma riski var mı?</span>
-            <i class="fa-solid fa-chevron-down"></i>
+            <span>Hangi donanım gereksinimleri gerekiyor?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
           </div>
           <div class="faq-answer">
-            Hayır. NEXUS-v2 kapalı kaynaklı ve makine koduna (Rust native binary) derlenmiş bağımsız bir masaüstü mimarisidir. Üretilen her lisans anahtarı kullanıcının bilgisayarına (Hardware ID) şifrelenerek bağlanır; böylece lisansınız izinsiz çoğaltılamaz veya paylaşılamaz. Kullanıcılarımızın sistemi önceden test edebilmesi için Ücretsiz Topluluk Sürümü sunulmaktadır; lisans teslimatından sonra çözülemeyen teknik bir engel yaşanması durumunda birebir teknik destek ve telafi güvencesi sağlanır.
+            <p>
+              Minimum Windows 11 x64, 16 GB RAM ve tercihen NVIDIA RTX serisi (RTX 3060 6GB VRAM veya üzeri) bir ekran kartı önerilir. Bulut model yönlendirmesiyle daha mütevazı donanımlarda da stabil çalışacak şekilde tasarlanmaktadır.
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       DOWNLOAD & HARDWARE REQUIREMENTS SECTION
-       ======================================================================== -->
-  <section class="section section-alt" id="download">
-    <div class="container">
-      <div class="download-card-hero">
-        
-        <div>
-          <div class="badge badge-emerald" style="margin-bottom: 16px;">
-            <span class="badge-dot"></span> WINDOWS 11 NATIVE CORE
-          </div>
-          <h2 style="font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; color: #fff; margin-bottom: 14px;">
-            NEXUS Masaüstü Sürümünü İnceleyin
-          </h2>
-          <p style="color: #b5c4e8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 26px;">
-            NEXUS-v2 masaüstü uygulaması Tauri v2 ve Rust ile derlenir; minimum RAM ve CPU ayak iziyle yerel Windows ortamında çalışır.
-          </p>
-
-          <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
-            <a href="https://github.com/mehmetmp27/nexus-project-site" target="_blank" rel="noopener" class="btn btn-primary">
-              <i class="fa-brands fa-windows"></i>
-              <span>GitHub'da Kaynak Kodu İncele</span>
-            </a>
-            <span style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--text-dim);">
-              SHA-256 Doğrulamalı Güvenlik İmzası
-            </span>
-          </div>
-        </div>
-
-        <!-- Hardware Specs -->
-        <div class="req-grid-specs">
-          <div class="req-box">
-            <div class="req-box-label">İşletim Sistemi</div>
-            <div class="req-box-val">Windows 11 (x64)</div>
-          </div>
-          <div class="req-box">
-            <div class="req-box-label">İşlemci (CPU)</div>
-            <div class="req-box-val">Intel i5-12500H / Denk</div>
-          </div>
-          <div class="req-box">
-            <div class="req-box-label">Sistem Belleği (RAM)</div>
-            <div class="req-box-val">16 GB Önerilen</div>
-          </div>
-          <div class="req-box">
-            <div class="req-box-label">Grafik (GPU)</div>
-            <div class="req-box-val">RTX 3060 (6GB VRAM)</div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1251,44 +697,35 @@
     <div class="container">
       <div class="footer-grid">
         
-        <div class="footer-brand">
-          <div class="logo-group">
+        <div>
+          <div class="logo-group" style="margin-bottom: 14px;">
             <div class="logo-icon">N</div>
             <span class="logo-text">NEXUS</span>
+            <span class="logo-sub">v2.0 CORE</span>
           </div>
-          <p>
-            Mehmet'in kontrolünde çalışan; modelleri, hafızayı, uzman ajanları ve masaüstü araçlarını birleştiren kişisel bilişsel işletim sistemi.
+          <p style="color: #8e9dbf; font-size: 0.88rem; line-height: 1.6;">
+            Kişisel Bilişsel İşletim Katmanı & Fotogerçekçi Dijital İnsan Varlığı.
           </p>
         </div>
 
         <div>
-          <h4 class="footer-col-title">Proje & Mimari</h4>
-          <ul class="footer-links">
-            <li><a href="#about" class="footer-link">Proje Vizyonu</a></li>
-            <li><a href="#comparison" class="footer-link">Chatbot Kıyaslaması</a></li>
-            <li><a href="#architecture" class="footer-link">6 Temel Katman</a></li>
-            <li><a href="#nexus01" class="footer-link">NEXUS-01 Varlık</a></li>
-            <li><a href="#security" class="footer-link">M3 Güvenlik Sözleşmesi</a></li>
+          <h4 class="footer-col-title">Navigasyon</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#about">NEXUS Nedir?</a></li>
+            <li><a href="#nexus01">NEXUS-01 Varlık</a></li>
+            <li><a href="#comparison">Farkımız</a></li>
+            <li><a href="#architecture">Mimari</a></li>
+            <li><a href="#modes">Çalışma Modları</a></li>
+            <li><a href="#security">Güvenlik</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-col-title">Masaüstü & Teknoloji</h4>
-          <ul class="footer-links">
-            <li><a href="#cockpit" class="footer-link">Canlı Kokpit Simülatörü</a></li>
-            <li><a href="#finance" class="footer-link">BIST Finans Analizi</a></li>
-            <li><a href="#agents" class="footer-link">Uzman Ajan Kataloğu</a></li>
-            <li><a href="#status" class="footer-link">Mühendislik Gap Matrisi</a></li>
-            <li><a href="https://github.com/mehmetmp27/nexus-project-site" class="footer-link" target="_blank" rel="noopener">GitHub Kaynak Kodu</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Yığın & Standartlar</h4>
+          <h4 class="footer-col-title">Teknik Standartlar</h4>
           <p style="color: #8e9dbf; font-size: 0.84rem; line-height: 1.6;">
             <strong>Masaüstü:</strong> Tauri v2 (Rust)<br>
-            <strong>Arayüz:</strong> React 19 + TypeScript<br>
-            <strong>Kalıcılık:</strong> SQLite M3 Engine<br>
+            <strong>Arayüz:</strong> React + TypeScript<br>
+            <strong>Hafıza:</strong> SQLite M3 Provenance<br>
             <strong>İşletim Sistemi:</strong> Windows 11 x64
           </p>
         </div>
@@ -1304,75 +741,42 @@
     </div>
   </footer>
 
-  <!-- ========================================================================
-       LIGHTBOX MODAL FOR IMAGE INSPECTION
-       ======================================================================== -->
-  <div class="lightbox-modal" id="lightboxModal">
-    <div class="lightbox-close-btn" id="lightboxClose"><i class="fa-solid fa-xmark"></i></div>
-    <div class="lightbox-content-box">
-      <img src="" alt="" class="lightbox-img" id="lightboxImg">
-      <div class="lightbox-caption">
-        <div>
-          <h4 id="lightboxTitle" style="color: #fff; font-family: var(--font-display);">Varlık Detayı</h4>
-          <p id="lightboxDesc" style="color: #8e9dbf; font-size: 0.85rem; margin-top: 4px;"></p>
-        </div>
-        <span class="badge badge-cyan">NEXUS-01 ASSET</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================
-       COMMAND PALETTE MODAL (CTRL + K)
-       ======================================================================== -->
+  <!-- Command Palette Modal -->
   <div class="cmd-palette-backdrop" id="cmdPalette">
     <div class="cmd-palette-box">
       <div class="cmd-input-bar">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" class="cmd-input-field" id="cmdInput" placeholder="Nereye gitmek istiyorsunuz? (Örn: avatar, finans, güvenlik)...">
+        <input type="text" class="cmd-input-field" id="cmdInput" placeholder="Nereye gitmek istiyorsunuz? (Örn: avatar, mimari, güvenlik)...">
         <kbd class="cmd-kbd-badge">ESC</kbd>
       </div>
       <ul class="cmd-list-items">
         <li class="cmd-item" data-target="#nexus01">
-          <div class="cmd-item-left"><i class="fa-solid fa-user-astronaut"></i><span>NEXUS-01 Varlık ve Biyometri Galerisi</span></div>
+          <div class="cmd-item-left"><i class="fa-solid fa-user-astronaut"></i><span>NEXUS-01 Varlık Galerisi</span></div>
           <span class="cmd-item-shortcut">#nexus01</span>
         </li>
-        <li class="cmd-item" data-target="#cockpit">
-          <div class="cmd-item-left"><i class="fa-solid fa-terminal"></i><span>Canlı Masaüstü Kokpiti (Simülatör)</span></div>
-          <span class="cmd-item-shortcut">#cockpit</span>
-        </li>
-        <li class="cmd-item" data-target="#finance">
-          <div class="cmd-item-left"><i class="fa-solid fa-chart-line"></i><span>İnteraktif BIST & Finans Analiz Motoru</span></div>
-          <span class="cmd-item-shortcut">#finance</span>
-        </li>
         <li class="cmd-item" data-target="#comparison">
-          <div class="cmd-item-left"><i class="fa-solid fa-scale-balanced"></i><span>Chatbot vs. NEXUS Mimari Kıyaslaması</span></div>
+          <div class="cmd-item-left"><i class="fa-solid fa-scale-balanced"></i><span>Chatbot vs. NEXUS Kıyaslaması</span></div>
           <span class="cmd-item-shortcut">#comparison</span>
         </li>
         <li class="cmd-item" data-target="#architecture">
           <div class="cmd-item-left"><i class="fa-solid fa-cubes"></i><span>6 Temel Bilişsel Katman</span></div>
           <span class="cmd-item-shortcut">#architecture</span>
         </li>
+        <li class="cmd-item" data-target="#modes">
+          <div class="cmd-item-left"><i class="fa-solid fa-sliders"></i><span>3 Dinamik Çalışma Modu</span></div>
+          <span class="cmd-item-shortcut">#modes</span>
+        </li>
         <li class="cmd-item" data-target="#security">
-          <div class="cmd-item-left"><i class="fa-solid fa-shield-halved"></i><span>M3 Güvenlik ve İzin Sözleşmesi</span></div>
+          <div class="cmd-item-left"><i class="fa-solid fa-shield-halved"></i><span>Güvenlik ve İzin Sözleşmesi</span></div>
           <span class="cmd-item-shortcut">#security</span>
         </li>
-        <li class="cmd-item" data-target="voice">
-          <div class="cmd-item-left"><i class="fa-solid fa-volume-high"></i><span>NEXUS-01 Türkçe Sesli Yanıtını Çal</span></div>
-          <span class="cmd-item-shortcut">Ses Çal</span>
-        </li>
         <li class="cmd-item" data-target="#pricing">
-          <div class="cmd-item-left"><i class="fa-solid fa-crown"></i><span>Şeffaf Lisans & Fiyatlandırma Planları</span></div>
+          <div class="cmd-item-left"><i class="fa-solid fa-crown"></i><span>Ön Sipariş Planları</span></div>
           <span class="cmd-item-shortcut">#pricing</span>
-        </li>
-        <li class="cmd-item" data-target="#download">
-          <div class="cmd-item-left"><i class="fa-brands fa-windows"></i><span>Windows Donanım Gereksinimleri & Sürüm</span></div>
-          <span class="cmd-item-shortcut">#download</span>
         </li>
       </ul>
     </div>
   </div>
-
-  <!-- Checkout modal REMOVED — replaced with Formspree waitlist forms in pricing section -->
 
   <!-- Interactive Scripts -->
   <script src="assets/js/main.js"></script>
