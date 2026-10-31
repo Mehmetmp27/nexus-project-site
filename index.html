@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
@@ -49,7 +49,6 @@
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">Hakkında</a></li>
           <li><a href="#nexus01" class="nav-link">NEXUS-01 Varlık</a></li>
-          <li><a href="#nexus01-detail" class="nav-link">Kimlik Arşivi</a></li>
           <li><a href="#comparison" class="nav-link">Farkımız</a></li>
           <li><a href="#architecture" class="nav-link">Mimari</a></li>
           <li><a href="#cockpit" class="nav-link">Canlı Kokpit</a></li>
@@ -296,194 +295,89 @@
   <section class="section" id="nexus01">
     <div class="container">
       <div class="section-head">
-        <div class="badge badge-violet">FOTOGERÇEKÇİ DİJİTAL İNSAN</div>
-        <h2 class="section-title">NEXUS-01 Varlık ve Biyometrik Kimlik</h2>
+        <div class="badge badge-violet">FOTOGERÇEKÇİ DİJİTAL VARLIK KATMANI</div>
+        <h2 class="section-title">NEXUS-01: Masaüstünüzde Yaşayan Yapay Zekâ</h2>
         <p class="section-desc">
-          NEXUS-01 rastgele bir avatar değil; onaylı kanonik referans (`1000321941.png`) ile korunan, 
-          doğal Türkçe konuşan, dalgalı kahverengi saçlara ve ela/yeşil irislere sahip kalıcı dijital insandır.
+          Sıradan bir chatbot kutusu veya yapay bir filtre değil. Windows ortamınızda sizinle çalışan, 
+          doğal Türkçe konuşan, sesinizi ve çalışma alanınızı anlayan fotogerçekçi görsel zekâ.
         </p>
       </div>
 
-      <!-- Filter Tabs -->
-      <div class="gallery-filter-tabs">
-        <button class="tab-btn active" data-filter="all">Tüm Referanslar</button>
-        <button class="tab-btn" data-filter="canonical">Kanonik Kimlik</button>
-        <button class="tab-btn" data-filter="expressions">Mimik & İfade Matrisi</button>
-        <button class="tab-btn" data-filter="eyes">Göz & Biyometri</button>
-        <button class="tab-btn" data-filter="anatomy">Anatomi & Poz</button>
-        <button class="tab-btn" data-filter="studio">Stüdyo & Çoklu Açı</button>
-      </div>
-
-      <!-- Gallery Grid -->
-      <div class="gallery-grid">
+      <!-- Persona Showcase Grid -->
+      <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         
-        <!-- 1. Canonical Master Reference -->
-        <div class="gallery-card" data-category="canonical">
+        <!-- 1. Real-time Viseme & Voice -->
+        <div class="gallery-card">
           <div class="gallery-media">
-            <img src="assets/images/nexus-01-canonical.png" alt="NEXUS-01 Kanonik Temel Referans (1000321941.png)">
-            <span class="gallery-tag-pill">KANONİK MASTER</span>
+            <img src="assets/images/nexus-01-canonical.png" alt="NEXUS-01 Doğal Türkçe Ses ve Dudak Senkronu">
+            <span class="gallery-tag-pill">CANLI SES SENKRONU</span>
             <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
           </div>
           <div class="gallery-body">
-            <h3 class="gallery-title">NEXUS-01 Kanonik Ana Referans</h3>
+            <h3 class="gallery-title">Doğal Türkçe Ses & Dudak Senkronu</h3>
             <p class="gallery-desc">
-              Onaylı temel dijital insan görünümü. Doğal cilt dokusu, dalgalı kahverengi saçlar, ela/yeşil iris ve dengeli anatomik oranlar.
+              Konuştuğunuz anda kelimelerinizi anlar. Gelişmiş viseme motoru sayesinde dudakları ve mimikleri Türkçe fonemlerle kusursuz bir uyumla senkronize olur.
             </p>
             <div class="gallery-footer-meta">
-              <span>Kaynak: `1000321941.png`</span>
-              <span>Çözünürlük: 1023×1537</span>
+              <span><i class="fa-solid fa-bolt"></i> Tepki: &lt;50ms</span>
+              <span><i class="fa-solid fa-waveform-lines"></i> Doğal Fonem</span>
             </div>
           </div>
         </div>
 
-        <!-- 2. Nine Expressions Portrait Matrix -->
-        <div class="gallery-card" data-category="expressions">
+        <!-- 2. Emotional Mesh & Expression Matrix -->
+        <div class="gallery-card">
           <div class="gallery-media">
-            <img src="assets/images/dokuz-ifadeli-portre-kolaji.png" alt="Dokuz İfadeli Portre Kolajı">
-            <span class="gallery-tag-pill">MİMİK MATRİSİ</span>
+            <img src="assets/images/dokuz-ifadeli-portre-kolaji.png" alt="NEXUS-01 Bilişsel Mimik Motoru">
+            <span class="gallery-tag-pill">BİLİŞSEL İFADE MOTORU</span>
             <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
           </div>
           <div class="gallery-body">
-            <h3 class="gallery-title">Dokuz İfadeli Mimik & Duygu Matrisi</h3>
+            <h3 class="gallery-title">Dinamik Duygusal Mimik Havuzu</h3>
             <p class="gallery-desc">
-              İletişim, düşünme, açıklama, tebessüm, dikkatli dinleme ve merak durumlarında yüz kasları ve göz odaklanmasının dinamik referansları.
+              Dinlerken odaklanır, onaylarken tebessüm eder, karmaşık finansal ve yazılımsal veri analizlerinde düşünce moduna geçer. Mekanik değil, canlı bir varlık hissi.
             </p>
             <div class="gallery-footer-meta">
-              <span>Durum: 9 Bilişsel Mod</span>
-              <span>Çözünürlük: 1122×1402</span>
+              <span><i class="fa-solid fa-brain"></i> 9 Bilişsel Mod</span>
+              <span><i class="fa-solid fa-heart-pulse"></i> Dinamik Adaptasyon</span>
             </div>
           </div>
         </div>
 
-        <!-- 3. Eye & Iris Biometrics -->
-        <div class="gallery-card" data-category="eyes">
+        <!-- 3. Strategic Executive Presence -->
+        <div class="gallery-card">
           <div class="gallery-media">
-            <img src="assets/images/goz-detaylari-referans-kolaji.png" alt="Göz Detayları Referans Kolajı">
-            <span class="gallery-tag-pill">BİYOMETRİK DETAY</span>
+            <img src="assets/images/NEXUS_REF_025_FULL_BODY_FRONT.png" alt="NEXUS-01 Yönetici Varlığı">
+            <span class="gallery-tag-pill">YÖNETİCİ PERSONASI</span>
             <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
           </div>
           <div class="gallery-body">
-            <h3 class="gallery-title">Göz ve İris Biyometrik İncelemesi</h3>
+            <h3 class="gallery-title">Stratejik Asistan & Masaüstü Varlığı</h3>
             <p class="gallery-desc">
-              Yeşil/ela renk gradyanı, göz kapağı katlantısı, doğal kirpik yapısı ve ışık yansıma fiziğinin mikroskobik referans analizi.
+              BIST hisselerini, şirket bilançolarını, KAP bildirimlerini ve günlük iş akışlarınızı yönetirken masaüstünüzde daima yanınızda duran profesyonel bir çalışma arkadaşı.
             </p>
             <div class="gallery-footer-meta">
-              <span>Özellik: Hazel-Green Iris</span>
-              <span>Çözünürlük: 1122×1402</span>
+              <span><i class="fa-solid fa-display"></i> Windows Masaüstü</span>
+              <span><i class="fa-solid fa-user-check"></i> Pro Duruş</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Realistic Face Set -->
-        <div class="gallery-card" data-category="canonical">
+        <!-- 4. Photorealistic Neural Rendering -->
+        <div class="gallery-card">
           <div class="gallery-media">
-            <img src="assets/images/gercekci-yuz-referans-seti.png" alt="Gerçekçi Yüz Referans Seti">
-            <span class="gallery-tag-pill">YÜZ MORFOLOJİSİ</span>
+            <img src="assets/images/NEXUS_FACE_001_APPROVED_FRONT_UPSCALED.png" alt="NEXUS-01 Fotogerçekçi Cilt ve Işık Fiziği">
+            <span class="gallery-tag-pill">FOTOGERÇEKÇİ FİZİK</span>
             <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
           </div>
           <div class="gallery-body">
-            <h3 class="gallery-title">Gerçekçi Yüz ve Cilt Dokusu</h3>
+            <h3 class="gallery-title">Doğal Cilt, Göz ve Işıklandırma</h3>
             <p class="gallery-desc">
-              Plastik yapay zekâ mankeni görünümünden uzak; gözenek, cilt mikro-dokusuna ve doğal kemik yapısına sahip yüksek sadakatli model.
+              Yapay zeka filtrelerinin aşırı pürüzsüz plastik hissi yerine; gerçek mikro gözenekler, doğal ela/yeşil iris derinliği ve ışık kırılmalarıyla tasarlanmış özgün bir varlık.
             </p>
             <div class="gallery-footer-meta">
-              <span>Doku: Subsurface Scattering</span>
-              <span>Çözünürlük: 1536×1024</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Multi-Angle Studio Neutral -->
-        <div class="gallery-card" data-category="studio">
-          <div class="gallery-media">
-            <img src="assets/images/gri-fondan-cok-acili-portre-referansi.png" alt="Gri Fondan Çok Açılı Portre Referansı">
-            <span class="gallery-tag-pill">STÜDYO AÇILARI</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="gallery-body">
-            <h3 class="gallery-title">Nötr Stüdyo Çoklu Açı İncelemesi</h3>
-            <p class="gallery-desc">
-              Gri stüdyo fonunda profil, yarı profil ve cephe açılarında ışık ve gölge sürekliliğini kanıtlayan çok açılı kompozisyon.
-            </p>
-            <div class="gallery-footer-meta">
-              <span>Aydınlatma: 3-Point Neutral</span>
-              <span>Çözünürlük: 1122×1402</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. 360 Turnaround Reference -->
-        <div class="gallery-card" data-category="studio">
-          <div class="gallery-media">
-            <img src="assets/images/kadin-karakter-donus-ve-detay-referansi.png" alt="Kadın Karakter Dönüş ve Detay Referansı">
-            <span class="gallery-tag-pill">360° DÖNÜŞ</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="gallery-body">
-            <h3 class="gallery-title">360° Dönüş ve Saç Detayları</h3>
-            <p class="gallery-desc">
-              Karakterin arkadan, yandan ve çapraz açılardan görünümü; dalgalı saç hacmi ve ense hattı morfolojisi.
-            </p>
-            <div class="gallery-footer-meta">
-              <span>Hacim: Volumetrik Saç</span>
-              <span>Çözünürlük: 1122×1402</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Pose & Character Sheet -->
-        <div class="gallery-card" data-category="anatomy">
-          <div class="gallery-media">
-            <img src="assets/images/kadin-karakter-referans-ve-poz-cizelgesi.png" alt="Kadın Karakter Referans ve Poz Çizelgesi">
-            <span class="gallery-tag-pill">POZ ÇİZELGESİ</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="gallery-body">
-            <h3 class="gallery-title">Karakter Poz ve Duruş Çizelgesi</h3>
-            <p class="gallery-desc">
-              Ayakta duruş, oturma, masaüstü çalışma pozları ve doğal el-kol dinamiğinin anatomik standartları.
-            </p>
-            <div class="gallery-footer-meta">
-              <span>Anatomi: İnsan Oranları</span>
-              <span>Çözünürlük: 1536×1024</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Anatomical 3D Modeling Set -->
-        <div class="gallery-card" data-category="anatomy">
-          <div class="gallery-media">
-            <img src="assets/images/nexus-01-anatomik-modelleme-referans-seti.png" alt="NEXUS-01 Anatomik Modelleme Referans Seti">
-            <span class="gallery-tag-pill">3D MODELLEME</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="gallery-body">
-            <h3 class="gallery-title">Anatomik Modelleme & Mesh Matrisi</h3>
-            <p class="gallery-desc">
-              3D mesh topolojisi, kemik iskeleti (rigging), yüz blendshape'leri ve viseme hareket referansları.
-            </p>
-            <div class="gallery-footer-meta">
-              <span>Rig: Blendshapes & Visemes</span>
-              <span>Çözünürlük: 1536×1024</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 9. Realistic Body Reference Set -->
-        <div class="gallery-card" data-category="anatomy">
-          <div class="gallery-media">
-            <img src="assets/images/nexus-01-gercekci-vucut-referans-seti.png" alt="NEXUS-01 Gerçekçi Vücut Referans Seti">
-            <span class="gallery-tag-pill">VÜCUT MORFOLOJİSİ</span>
-            <div class="gallery-zoom-hint"><i class="fa-solid fa-expand"></i></div>
-          </div>
-          <div class="gallery-body">
-            <h3 class="gallery-title">Gerçekçi Vücut Oranları Referans Seti</h3>
-            <p class="gallery-desc">
-              Fiziksel oranların ve omuz, bel, boyun dengesinin fotogerçekçi sürekliliği; stilize olmayan insan estetiği.
-            </p>
-            <div class="gallery-footer-meta">
-              <span>Karakter: Adult Photorealistic</span>
-              <span>Çözünürlük: 1536×1024</span>
+              <span><i class="fa-solid fa-eye"></i> İris Derinliği</span>
+              <span><i class="fa-solid fa-sparkles"></i> 4K Kalite</span>
             </div>
           </div>
         </div>
@@ -492,207 +386,6 @@
     </div>
   </section>
 
-  <!-- ========================================================================
-       NEXUS-01 FULL BODY & DETAIL REFERENCE GALLERY (NEW)
-       ======================================================================== -->
-  <section class="section section-alt" id="nexus01-detail">
-    <div class="container">
-      <div class="section-head">
-        <div class="badge badge-cyan">NEXUS-01 KİMLİK ARŞİVİ</div>
-        <h2 class="section-title">Tam Vücut, Yüz ve Detay Referansları</h2>
-        <p class="section-desc">
-          NEXUS-01'in onaylı kanonik kimliği — yüzden ayağa, gözden saça kadar 
-          her anatomik detay kalıcı olarak arşivlenmiş, kopyalanamaz dijital varlık kimliği.
-        </p>
-      </div>
-
-      <!-- Detail Gallery Filter -->
-      <div class="gallery-filter-tabs" style="margin-bottom:2rem;">
-        <button class="tab-btn active" data-filter2="all2">Tümü</button>
-        <button class="tab-btn" data-filter2="face2">Yüz & İfade</button>
-        <button class="tab-btn" data-filter2="body2">Tam Vücut</button>
-        <button class="tab-btn" data-filter2="detail2">Mikro Detay</button>
-      </div>
-
-      <div class="detail-gallery-grid" id="detailGalleryGrid">
-
-        <!-- Face — Front Approved -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_FACE_001_APPROVED_FRONT_UPSCALED.png" alt="NEXUS-01 Onaylı Ön Yüz" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">ONAYLANMIş KANONİK</span>
-            <h4>Ön Yüz — Ana Referans</h4>
-          </div>
-        </div>
-
-        <!-- Face — Front Crop -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_FACE_001_APPROVED_FRONT_ORIGINAL_CROP.png" alt="NEXUS-01 Yüz Kırpma" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">KANONİK ORİJİNAL</span>
-            <h4>Yüz Kırpma — Ham Veri</h4>
-          </div>
-        </div>
-
-        <!-- Face — Tight Crop -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_REF_032_FACE_FRONT_TIGHT_CROP.png" alt="NEXUS-01 Yakın Yüz" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">YAP KIRIM YÜZÜ</span>
-            <h4>Tam Ön — Yüz Kadrajı</h4>
-          </div>
-        </div>
-
-        <!-- Face — Three Quarter -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_REF_035_FACE_THREE_QUARTER.png" alt="NEXUS-01 3/4 Açı" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">3/4 AÇI</span>
-            <h4>Üç Çeyrek Yüz Profili</h4>
-          </div>
-        </div>
-
-        <!-- Face — Left Profile -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_REF_033_FACE_LEFT_PROFILE.png" alt="NEXUS-01 Sol Profil" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">SOL PROFİL</span>
-            <h4>Yüz Sol Profil</h4>
-          </div>
-        </div>
-
-        <!-- Face — Right Profile -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_REF_034_FACE_RIGHT_PROFILE.png" alt="NEXUS-01 Sağ Profil" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">SAĞ PROFİL</span>
-            <h4>Yüz Sağ Profil</h4>
-          </div>
-        </div>
-
-        <!-- Expression — Smile -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_REF_072_GENUINE_SMILE_CANDIDATE.png" alt="NEXUS-01 Gerçek Gülümseme" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">MİMİK</span>
-            <h4>Gerçekçi Gülümseme</h4>
-          </div>
-        </div>
-
-        <!-- Expression — Surprised -->
-        <div class="detail-card" data-cat2="face2">
-          <img src="assets/images/NEXUS_REF_073_SURPRISED_EXPRESSION_CANDIDATE.png" alt="NEXUS-01 Şaşırma İfadesi" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">MİMİK</span>
-            <h4>Şaşırma İfadesi</h4>
-          </div>
-        </div>
-
-        <!-- Full Body — Front -->
-        <div class="detail-card detail-card-wide" data-cat2="body2">
-          <img src="assets/images/NEXUS_REF_025_FULL_BODY_FRONT.png" alt="NEXUS-01 Tam Vücut Ön" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">TAM VÜCUT</span>
-            <h4>Tam Vücut — Ön Cephe</h4>
-          </div>
-        </div>
-
-        <!-- Full Body — Left Profile -->
-        <div class="detail-card" data-cat2="body2">
-          <img src="assets/images/NEXUS_REF_026_FULL_BODY_LEFT_PROFILE.png" alt="NEXUS-01 Sol Vücut Profil" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">SOL PROFİL</span>
-            <h4>Tam Vücut Sol</h4>
-          </div>
-        </div>
-
-        <!-- Full Body — Right Profile -->
-        <div class="detail-card" data-cat2="body2">
-          <img src="assets/images/NEXUS_REF_027_FULL_BODY_RIGHT_PROFILE.png" alt="NEXUS-01 Sağ Vücut Profil" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">SAĞ PROFİL</span>
-            <h4>Tam Vücut Sağ</h4>
-          </div>
-        </div>
-
-        <!-- Full Body — 45° -->
-        <div class="detail-card" data-cat2="body2">
-          <img src="assets/images/NEXUS_REF_030_FULL_BODY_OPPOSITE_45_FRONT.png" alt="NEXUS-01 45 Derece Açı" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">45° AÇI</span>
-            <h4>Tam Vücut 45° Ön</h4>
-          </div>
-        </div>
-
-        <!-- Eyes -->
-        <div class="detail-card" data-cat2="detail2">
-          <img src="assets/images/NEXUS_REF_036_BOTH_EYES_FRONT_CANDIDATE.png" alt="NEXUS-01 Göz Detayı" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">GÖZ BİYOMETRİSİ</span>
-            <h4>Her İki Göz — Ön Kadraj</h4>
-          </div>
-        </div>
-
-        <!-- Eye Color Master -->
-        <div class="detail-card" data-cat2="detail2">
-          <img src="assets/images/NEXUS_REF_013_EYE_COLOR_MASTER.jpg" alt="NEXUS-01 Göz Rengi" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">RENK MASTER</span>
-            <h4>İris Renk Referansı</h4>
-          </div>
-        </div>
-
-        <!-- Hair Texture -->
-        <div class="detail-card" data-cat2="detail2">
-          <img src="assets/images/NEXUS_REF_020_HAIR_TEXTURE.png" alt="NEXUS-01 Saç Tekstürü" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">SAÇ TEKSTÜRÜ</span>
-            <h4>Saç Dalgalanma Detayı</h4>
-          </div>
-        </div>
-
-        <!-- Skin & Freckles -->
-        <div class="detail-card" data-cat2="detail2">
-          <img src="assets/images/NEXUS_REF_039_FACIAL_SKIN_FRECKLES_CANDIDATE.png" alt="NEXUS-01 Cilt Detayı" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">CİLT DOKUSU</span>
-            <h4>Yüz Cilt & Çil Detayı</h4>
-          </div>
-        </div>
-
-        <!-- Lips Macro -->
-        <div class="detail-card" data-cat2="detail2">
-          <img src="assets/images/NEXUS_REF_017_LIPS_SKIN_MACRO_FULL.png" alt="NEXUS-01 Dudak Detayı" loading="lazy" class="detail-img">
-          <div class="detail-label">
-            <span class="detail-tag">DUDAK MAKRO</span>
-            <h4>Dudak & Cilt Yakın Plan</h4>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Stats Row under detail gallery -->
-      <div class="ref-stats-row">
-        <div class="ref-stat">
-          <div class="ref-stat-num">110+</div>
-          <div class="ref-stat-label">Onaylı Referans Görsel</div>
-        </div>
-        <div class="ref-stat">
-          <div class="ref-stat-num">36</div>
-          <div class="ref-stat-label">Biyometrik Kontrol Noktası</div>
-        </div>
-        <div class="ref-stat">
-          <div class="ref-stat-num">4K</div>
-          <div class="ref-stat-label">Çözünürlük Standartı</div>
-        </div>
-        <div class="ref-stat">
-          <div class="ref-stat-num">1</div>
-          <div class="ref-stat-label">Kanonik Kimlik — Değiştirilemez</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
 
   <!-- ========================================================================
        COGNITIVE ARCHITECTURE (6 PILLARS)
